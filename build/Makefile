@@ -65,15 +65,25 @@ CMAKE_BINARY_DIR = /Users/anselchang/LocalFiles/psycho-ai/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/opt/homebrew/Cellar/cmake/3.22.3/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/opt/homebrew/Cellar/cmake/3.22.3/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
 
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/opt/homebrew/Cellar/cmake/3.22.3/bin/cpack --config ./CPackSourceConfig.cmake /Users/anselchang/LocalFiles/psycho-ai/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -136,8 +146,56 @@ Psycho: cmake_check_build_system
 
 # fast build rule for target.
 Psycho/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/Psycho.dir/build.make src/CMakeFiles/Psycho.dir/build
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/build
 .PHONY : Psycho/fast
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/models/TetrisBoard.o: src/models/TetrisBoard.cpp.o
+.PHONY : src/models/TetrisBoard.o
+
+# target to build an object file
+src/models/TetrisBoard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o
+.PHONY : src/models/TetrisBoard.cpp.o
+
+src/models/TetrisBoard.i: src/models/TetrisBoard.cpp.i
+.PHONY : src/models/TetrisBoard.i
+
+# target to preprocess a source file
+src/models/TetrisBoard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.i
+.PHONY : src/models/TetrisBoard.cpp.i
+
+src/models/TetrisBoard.s: src/models/TetrisBoard.cpp.s
+.PHONY : src/models/TetrisBoard.s
+
+# target to generate assembly for a file
+src/models/TetrisBoard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.s
+.PHONY : src/models/TetrisBoard.cpp.s
 
 # Help Target
 help:
@@ -146,9 +204,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... Psycho"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/models/TetrisBoard.o"
+	@echo "... src/models/TetrisBoard.i"
+	@echo "... src/models/TetrisBoard.s"
 .PHONY : help
 
 

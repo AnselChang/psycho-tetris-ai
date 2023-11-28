@@ -1,10 +1,23 @@
-cmake_minimum_required(VERSION 3.10)   # Set the minimum required version of CMake
-project(Psycho)                     # Define the project name
+# Set the minimum version of CMake that can be used
+# To find the cmake version run
+# $ cmake --version
+cmake_minimum_required(VERSION 3.5)
 
-set(CMAKE_CXX_STANDARD 17)             # Use C++17 standard
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# Set the project name
+project (Psycho)
 
-add_subdirectory(src)                  # Add the source directory
-include_directories(${CMAKE_SOURCE_DIR}/include) # Include the header files
+# Create a sources variable with a link to all cpp files to compile
+set(SOURCES
+    src/models/TetrisBoard.cpp
+    src/main.cpp
+)
 
-enable_testing()                       # Enable testing (if you have tests)
+# Add an executable with the above sources
+add_executable(Psycho ${SOURCES})
+
+# Set the directories that should be included in the build command for this target
+# when running g++ these will be included as -I/directory/path/
+target_include_directories(Psycho
+    PRIVATE 
+        ${PROJECT_SOURCE_DIR}/include
+)

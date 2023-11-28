@@ -3,7 +3,7 @@
 
 int main() {
 
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << "Hello, Wld!" << std::endl;
 
     TetrisBoard board;
     board.display();
