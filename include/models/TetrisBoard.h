@@ -3,6 +3,8 @@
 
 #include <bitset>
 #include <array>
+#include <initializer_list>
+#include <vector>
 
 class TetrisBoard {
 private:
@@ -11,6 +13,12 @@ private:
     std::array<std::bitset<width>, height> rows;
 
 public:
+
+    // constructor that takes in a list of rows
+    TetrisBoard();
+    TetrisBoard(std::initializer_list<std::bitset<width>> rows);
+
+
     void set(int x, int y, bool value);
     bool get(int x, int y) const;
     void display() const;

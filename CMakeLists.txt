@@ -6,9 +6,14 @@ cmake_minimum_required(VERSION 3.5)
 # Set the project name
 project (Psycho)
 
+# Set the C++ standard version
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 # Create a sources variable with a link to all cpp files to compile
 set(SOURCES
     src/models/TetrisBoard.cpp
+    src/constants/Tetrominos.cpp
     src/main.cpp
 )
 

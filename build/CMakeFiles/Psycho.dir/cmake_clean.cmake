@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o"
+  "CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/main.cpp.o"
   "CMakeFiles/Psycho.dir/src/main.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o"

@@ -1,6 +1,26 @@
 #include "models/TetrisBoard.h"
 #include <iostream>
 
+TetrisBoard::TetrisBoard() {
+    // Initialize all rows to empty
+    for (auto& row : rows) {
+        row.reset();
+    }
+}
+
+TetrisBoard::TetrisBoard(std::initializer_list<std::bitset<width>> rows) {
+    // Initialize all rows to empty
+    for (auto& row : this->rows) {
+        row.reset();
+    }
+
+    // Copy the rows from the initializer list
+    int i = 0;
+    for (auto& row : rows) {
+        this->rows[i++] = row;
+    }
+}
+
 void TetrisBoard::set(int x, int y, bool value) {
     if (x >= 0 && x < width && y >= 0 && y < height) {
         rows[y].set(x, value);

@@ -149,6 +149,30 @@ Psycho/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/build
 .PHONY : Psycho/fast
 
+src/constants/Tetrominos.o: src/constants/Tetrominos.cpp.o
+.PHONY : src/constants/Tetrominos.o
+
+# target to build an object file
+src/constants/Tetrominos.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o
+.PHONY : src/constants/Tetrominos.cpp.o
+
+src/constants/Tetrominos.i: src/constants/Tetrominos.cpp.i
+.PHONY : src/constants/Tetrominos.i
+
+# target to preprocess a source file
+src/constants/Tetrominos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.i
+.PHONY : src/constants/Tetrominos.cpp.i
+
+src/constants/Tetrominos.s: src/constants/Tetrominos.cpp.s
+.PHONY : src/constants/Tetrominos.s
+
+# target to generate assembly for a file
+src/constants/Tetrominos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.s
+.PHONY : src/constants/Tetrominos.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -208,6 +232,9 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... Psycho"
+	@echo "... src/constants/Tetrominos.o"
+	@echo "... src/constants/Tetrominos.i"
+	@echo "... src/constants/Tetrominos.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
