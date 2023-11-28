@@ -197,6 +197,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/models/Grid.o: src/models/Grid.cpp.o
+.PHONY : src/models/Grid.o
+
+# target to build an object file
+src/models/Grid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Grid.cpp.o
+.PHONY : src/models/Grid.cpp.o
+
+src/models/Grid.i: src/models/Grid.cpp.i
+.PHONY : src/models/Grid.i
+
+# target to preprocess a source file
+src/models/Grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Grid.cpp.i
+.PHONY : src/models/Grid.cpp.i
+
+src/models/Grid.s: src/models/Grid.cpp.s
+.PHONY : src/models/Grid.s
+
+# target to generate assembly for a file
+src/models/Grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Grid.cpp.s
+.PHONY : src/models/Grid.cpp.s
+
 src/models/TetrisBoard.o: src/models/TetrisBoard.cpp.o
 .PHONY : src/models/TetrisBoard.o
 
@@ -221,6 +245,30 @@ src/models/TetrisBoard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.s
 .PHONY : src/models/TetrisBoard.cpp.s
 
+src/models/Tetromino.o: src/models/Tetromino.cpp.o
+.PHONY : src/models/Tetromino.o
+
+# target to build an object file
+src/models/Tetromino.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o
+.PHONY : src/models/Tetromino.cpp.o
+
+src/models/Tetromino.i: src/models/Tetromino.cpp.i
+.PHONY : src/models/Tetromino.i
+
+# target to preprocess a source file
+src/models/Tetromino.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.i
+.PHONY : src/models/Tetromino.cpp.i
+
+src/models/Tetromino.s: src/models/Tetromino.cpp.s
+.PHONY : src/models/Tetromino.s
+
+# target to generate assembly for a file
+src/models/Tetromino.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.s
+.PHONY : src/models/Tetromino.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,9 +286,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/models/Grid.o"
+	@echo "... src/models/Grid.i"
+	@echo "... src/models/Grid.s"
 	@echo "... src/models/TetrisBoard.o"
 	@echo "... src/models/TetrisBoard.i"
 	@echo "... src/models/TetrisBoard.s"
+	@echo "... src/models/Tetromino.o"
+	@echo "... src/models/Tetromino.i"
+	@echo "... src/models/Tetromino.s"
 .PHONY : help
 
 

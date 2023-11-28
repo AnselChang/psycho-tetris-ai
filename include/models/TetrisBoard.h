@@ -5,12 +5,15 @@
 #include <array>
 #include <initializer_list>
 #include <vector>
+#include "models/Grid.h"
 
 class TetrisBoard {
 private:
     static const int width = 10;
     static const int height = 20;
-    std::array<std::bitset<width>, height> rows;
+
+    Grid<width, height> grid;
+
 
 public:
 

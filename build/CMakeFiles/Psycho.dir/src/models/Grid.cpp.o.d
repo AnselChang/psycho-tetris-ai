@@ -1,6 +1,6 @@
-CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o: \
- /Users/anselchang/LocalFiles/psycho-ai/src/models/TetrisBoard.cpp \
- /Users/anselchang/LocalFiles/psycho-ai/include/models/TetrisBoard.h \
+CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: \
+ /Users/anselchang/LocalFiles/psycho-ai/src/models/Grid.cpp \
+ /Users/anselchang/LocalFiles/psycho-ai/include/models/Grid.h \
  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bitset \
  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/string \
  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/c++config.h \
@@ -179,7 +179,6 @@ CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o: \
  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_vector.h \
  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_bvector.h \
  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/vector.tcc \
- /Users/anselchang/LocalFiles/psycho-ai/include/models/Grid.h \
  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/iostream \
  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ostream \
  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ios \

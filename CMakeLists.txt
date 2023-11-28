@@ -12,7 +12,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Create a sources variable with a link to all cpp files to compile
 set(SOURCES
+    src/models/Grid.cpp
     src/models/TetrisBoard.cpp
+    src/models/Tetromino.cpp
     src/constants/Tetrominos.cpp
     src/main.cpp
 )
