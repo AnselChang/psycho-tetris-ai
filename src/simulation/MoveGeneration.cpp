@@ -4,8 +4,17 @@
 
 struct Position {
     int actionFrameIndex; // not actual frame index
+    int frameIndex; // actual frame index
     int x;
     int y;
+};
+
+class Compare
+{
+public:
+    bool operator()(const Position& lhs, const Position& rhs) {
+        return lhs.frameIndex > rhs.frameIndex;
+    }
 };
 
 
@@ -18,13 +27,13 @@ void generateMovesForRotation(std::vector<MoveableTetromino>& moves, const Tetri
         }
     }
 
-    std::queue<Position> queue;
+    std::priority_queue<Position, std::vector<Position>, Compare> queue; // lowest FRAME INDEX (not actionindex) first
     
     int startX = TETROMINOS[type].getSpawnX();
     queue.push({0, startX, 0});
 
     while (!queue.empty()) {
-        Position position = queue.front();
+        Position position = queue.top();
         queue.pop();
 
         ActionFrame frame = frames.get(position.actionFrameIndex);
@@ -46,7 +55,8 @@ void generateMovesForRotation(std::vector<MoveableTetromino>& moves, const Tetri
 
                 // Register the input by adding to visited and pushing to queue
                 visited[mt.getY()][mt.getX()] = true;
-                queue.push({position.actionFrameIndex + 1, mt.getX(), mt.getY()});
+                int frameIndex = frames.get(position.actionFrameIndex+1).frameIndex;
+                queue.push({position.actionFrameIndex + 1, frameIndex, mt.getX(), mt.getY()});
             }
         } else { // frame.action == Action::DROP
 
@@ -62,7 +72,9 @@ void generateMovesForRotation(std::vector<MoveableTetromino>& moves, const Tetri
                 if (!dropMt.isInBounds() || dropMt.intersectsTetrisBoard(board)) throw std::runtime_error("generateMovesForRotation: drop is not legal, something went wrong");
                 
                 // otherwise, drop and add to queue
-                queue.push({position.actionFrameIndex + 1, mt.getX(), mt.getY() + 1});
+                visited[mt.getY()][mt.getX()] = true;
+                int frameIndex = frames.get(position.actionFrameIndex+1).frameIndex;
+                queue.push({position.actionFrameIndex + 1, frameIndex, mt.getX(), mt.getY() + 1});
             }
 
         }
