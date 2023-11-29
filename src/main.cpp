@@ -8,7 +8,11 @@ int main() {
 
     std::cout << "Hello, Wld!" << std::endl;
 
-    MoveableTetromino moveableTetromino(TetrominoType::I_TYPE, 1, 0, 0);
-    moveableTetromino.getAsTetrisBoard().getGrid().display();
+    for (int i = -2; i < 9; i++) {
+        MoveableTetromino moveableTetromino(TetrominoType::I_TYPE, 0, i, 0);
+        moveableTetromino.getAsTetrisBoard().getGrid().display();
+        std::cout << (moveableTetromino.isInBounds() ? "true" : "false") << std::endl;
+    }
+
     return 0;
 }

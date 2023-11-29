@@ -27,6 +27,9 @@ public:
 
     // returns a new TetrisBoard with the tetromino blitted to it
     TetrisBoard getAsTetrisBoard() const;
+
+    // whether the tetromino in its current pose is in bounds a tetris board
+    bool isInBounds() const;
 };
 
 #endif // MOVEABLE_TETROMINO_H

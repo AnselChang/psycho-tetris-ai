@@ -49,3 +49,21 @@ TetrisBoard MoveableTetromino::getAsTetrisBoard() const {
     this->blitToTetrisBoard(tetrisBoard);
     return tetrisBoard;
 }
+
+bool MoveableTetromino::isInBounds() const {
+    const Grid<4,4> grid = this->getGridAtCurrentRotation();
+    const int maxXIndex = tetrominoMap[this->tetrominoType].getMaxXIndex(this->rotation);
+    const int maxYIndex = tetrominoMap[this->tetrominoType].getMaxYIndex(this->rotation);
+
+    const int relMinX = this->x;
+    const int relMaxX = this->x + maxXIndex;
+    const int relMinY = this->y;
+    const int relMaxY = this->y + maxYIndex;
+
+    // check if the tetromino is out of bounds of the 20 row x 10 col tetris board
+    if (relMinX < 0 || relMaxX >= 10 || relMinY < 0 || relMaxY >= 20) {
+        return false;
+    }
+
+    return true;
+}

@@ -16,6 +16,8 @@ private:
 
     // tetris board for each rotation. pieces have up to four possible rotations
     std::vector<Grid<4, 4>> rotations;
+    std::vector<int> maxXIndex; // the maximum x index for each rotation
+    std::vector<int> maxYIndex; // the maximum y index for each rotation
 
 public:
     Tetromino(TetrominoType type, std::vector<Grid<4, 4>> rotations);
@@ -25,6 +27,13 @@ public:
     TetrominoType getType() const;
     Grid<4,4> getRotation(int rotation) const;
     int getNumRotations() const;
+
+    // returns the maximum x and y index for the given rotation
+    int getMaxXIndex(int rotation) const;
+    int getMaxYIndex(int rotation) const;
+
+
+    void display() const;
 };
 
 #endif // TETROMINO_H
