@@ -44,20 +44,28 @@ Grid<4,4> MoveableTetromino::getGridAtCurrentRotation() const {
     return TETROMINOS[this->tetrominoType].getRotation(this->rotation);
 }
 
+std::bitset<10> MoveableTetromino::getShiftedRow(int row) const {
+
+    Grid<4,4> grid = this->getGridAtCurrentRotation();
+
+    // shift gridRow to the right by x
+    const auto gridRow = grid.getRow(row);
+    const std::bitset<10> paddedGridRow(gridRow.to_ulong());
+    const std::bitset<10> shiftedGridRow = (this->x > 0) ? (paddedGridRow << this->x) : (paddedGridRow >> -this->x);
+
+    return shiftedGridRow;
+}
+
 void MoveableTetromino::blitToTetrisBoard(TetrisBoard& tetrisBoard) const {
 
     if (!this->isInBounds()) {
         throw std::runtime_error("Tetromino is out of bounds");
     }
-
-    Grid<4,4> grid = this->getGridAtCurrentRotation();
     
     // blit row by row using bitwise operations
     for (int y = 0; y < 4; y++) {
 
-        // shift gridRow to the right by x
-        const auto gridRow = grid.getRow(y);
-        const std::bitset<10> shiftedGridRow(gridRow.to_ulong() << this->x);
+        const std::bitset<10> shiftedGridRow = this->getShiftedRow(y);
 
         // get the row of the tetrisBoard that we are blitting to
         const int tetrisBoardRowIndex = this->y + y;
@@ -103,15 +111,11 @@ bool MoveableTetromino::isInBounds() const {
 
 // precondition: the tetromino is in bounds
 bool MoveableTetromino::intersectsTetrisBoard(const TetrisBoard& tetrisBoard) const {
-
-    Grid<4,4> grid = this->getGridAtCurrentRotation();
     
     // check if it insersects row by row
     for (int y = 0; y < 4; y++) {
 
-        // shift gridRow to the right by x
-        const auto gridRow = grid.getRow(y);
-        const std::bitset<10> shiftedGridRow(gridRow.to_ulong() << this->x);
+        const std::bitset<10> shiftedGridRow = this->getShiftedRow(y);
 
         // get the row of the tetrisBoard that we are comparing with
         const int tetrisBoardRowIndex = this->y + y;

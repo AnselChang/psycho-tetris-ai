@@ -14,6 +14,8 @@ private:
     int rotation = 0;
     int x = 0;
     int y = 0;
+
+    std::bitset<10> getShiftedRow(int row) const;
     
 public:
     MoveableTetromino(TetrominoType tetrominoType);

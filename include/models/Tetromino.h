@@ -22,9 +22,10 @@ private:
     std::vector<int> maxYIndex; // the maximum y index for each rotation
 
     const int spawnX;
+    const int spawnY;
 
 public:
-    Tetromino(TetrominoType type, std::vector<Grid<4, 4>> rotations, int spawnX);
+    Tetromino(TetrominoType type, std::vector<Grid<4, 4>> rotations, int spawnX, int spawnY);
 
     Tetromino();
 
@@ -32,6 +33,7 @@ public:
     Grid<4,4> getRotation(int rotation) const;
     int getNumRotations() const;
     int getSpawnX() const;
+    int getSpawnY() const;
 
     // returns the maximum x and y index for the given rotation
     int getMinXIndex(int rotation) const;

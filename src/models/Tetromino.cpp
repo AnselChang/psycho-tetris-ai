@@ -2,10 +2,11 @@
 #include "models/Grid.h"
 
 Tetromino::Tetromino():
-    type(UNDEFINED_TYPE), spawnX(0)
+    type(UNDEFINED_TYPE), spawnX(0), spawnY(0)
 {}
 
-Tetromino::Tetromino(TetrominoType type, std::vector<Grid<4,4>> rotations, int spawnX): spawnX(spawnX) {
+Tetromino::Tetromino(TetrominoType type, std::vector<Grid<4,4>> rotations, int spawnX, int spawnY):
+spawnX(spawnX), spawnY(spawnY) {
     this->type = type;
     this->rotations = rotations;
 
@@ -83,6 +84,10 @@ int Tetromino::getMaxYIndex(int rotation) const {
 
 int Tetromino::getSpawnX() const {
     return this->spawnX;
+}
+
+int Tetromino::getSpawnY() const {
+    return this->spawnY;
 }
 
 void Tetromino::display() const {
