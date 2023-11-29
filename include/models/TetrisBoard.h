@@ -26,6 +26,9 @@ public:
     std::bitset<width> getRow(int y) const;
     bool get(int x, int y) const;
     void display() const;
+
+    // run any line clears and return the number of lines cleared
+    int clearLines();
     
 };
 
