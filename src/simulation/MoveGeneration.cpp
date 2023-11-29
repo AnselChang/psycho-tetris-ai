@@ -67,7 +67,7 @@ void generateMovesForRotation(std::vector<MoveableTetromino>& moves, const Tetri
 
                 // std::cout << "before visited" << std::endl;
                 // ignore if visited
-                if (visited[mt.getY()+VISITED_OFFSET][mt.getX()+VISITED_OFFSET]) continue;
+                if (newX != position.x && visited[mt.getY()+VISITED_OFFSET][mt.getX()+VISITED_OFFSET]) continue;
 
                 mt.blitToNewTetrisBoard(board).display();
 
