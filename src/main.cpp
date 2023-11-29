@@ -13,15 +13,10 @@ using namespace std::chrono;
 int main() {
 
 
-    ActionFrames af(InputSequence("X..."), 19);
+    ActionFrames af(InputSequence("X."), 18);
 
     // fill board with all blocks for the bottom 12 rows
     TetrisBoard board;
-    for (int y = 6; y < 20; y++) {
-        for (int x = 0; x < 10; x++) {
-            board.getGrid().set(x, y, true);
-        }
-    }
 
     auto start = high_resolution_clock::now();
     std::vector<MoveableTetromino> moves = generateMoves(board, af, TetrominoType::I_TYPE);
@@ -34,8 +29,8 @@ int main() {
         copy.display();
     }
 
-    auto duration = duration_cast<milliseconds>(stop - start);
-    std::cout << "Time taken by function: " << duration.count() << " milliseconds" << std::endl;
+    auto duration = duration_cast<microseconds>(stop - start);
+    std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
 
     return 0;
 }

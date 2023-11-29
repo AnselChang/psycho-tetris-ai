@@ -44,16 +44,16 @@ void generateMovesForRotation(std::vector<MoveableTetromino>& moves, const Tetri
         ActionFrame frame = frames.get(position.actionFrameIndex);
 
         MoveableTetromino originalMt(type, rotation, position.x, position.y);
-        std::cout << "original" << std::endl;
-        originalMt.blitToNewTetrisBoard(board).display();
+        // std::cout << "original" << std::endl;
+        // originalMt.blitToNewTetrisBoard(board).display();
 
         if (frame.action == Action::INPUT) {
 
-            std::cout << "input" << std::endl;
+            // std::cout << "input" << std::endl;
             
             // loop through possible translation input
             for (int newX = position.x - 1; newX <= position.x + 1; newX++) {
-                std::cout << (position.x-newX) << std::endl;
+                // std::cout << (position.x-newX) << std::endl;
                 MoveableTetromino mt(type, rotation, newX, position.y);
 
                 // std::cout << "before bounds" << std::endl;
@@ -69,7 +69,7 @@ void generateMovesForRotation(std::vector<MoveableTetromino>& moves, const Tetri
                 // ignore if visited
                 if (newX != position.x && visited[mt.getY()+VISITED_OFFSET][mt.getX()+VISITED_OFFSET]) continue;
 
-                mt.blitToNewTetrisBoard(board).display();
+                // mt.blitToNewTetrisBoard(board).display();
 
                 // std::cout << "before register" << std::endl;
                 // Register the input by adding to visited and pushing to queue
@@ -80,24 +80,24 @@ void generateMovesForRotation(std::vector<MoveableTetromino>& moves, const Tetri
             }
         } else { // frame.action == Action::DROP
 
-            std::cout << "drop" << std::endl;
+            // std::cout << "drop" << std::endl;
 
             MoveableTetromino mt(type, rotation, position.x, position.y);
 
             // check if it's already a valid placement. if so, cannot drop but lock piece instead
             if (mt.isLegalPlacement(board)) {
 
-                std::cout << "LOCK" << std::endl;
-                mt.blitToNewTetrisBoard(board).display();
+                // std::cout << "LOCK" << std::endl;
+                // mt.blitToNewTetrisBoard(board).display();
 
                 moves.push_back(mt);
                 continue;
             } else {                
                 // asert drop is legal. REMOVE IN PRODUCTION
                 MoveableTetromino dropMt(type, rotation, position.x, position.y + 1);
-                std::cout << "after drop" << std::endl;
+                // std::cout << "after drop" << std::endl;
                 if (!dropMt.isInBounds() || dropMt.intersectsTetrisBoard(board)) throw std::runtime_error("generateMovesForRotation: drop is not legal, something went wrong");
-                dropMt.blitToNewTetrisBoard(board).display();
+                // dropMt.blitToNewTetrisBoard(board).display();
 
                 // otherwise, drop and add to queue
                 visited[mt.getY()+VISITED_OFFSET + 1][mt.getX()+VISITED_OFFSET] = true;
