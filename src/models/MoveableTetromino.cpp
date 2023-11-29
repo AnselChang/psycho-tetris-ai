@@ -3,12 +3,12 @@
 
 MoveableTetromino::MoveableTetromino(TetrominoType tetrominoType):
     tetrominoType(tetrominoType),
-    numRotations(tetrominoMap[tetrominoType].getNumRotations())
+    numRotations(TETROMINOS[tetrominoType].getNumRotations())
 {}
 
 MoveableTetromino::MoveableTetromino(TetrominoType tetrominoType, int r, int x, int y):
     tetrominoType(tetrominoType),
-    numRotations(tetrominoMap[tetrominoType].getNumRotations()),
+    numRotations(TETROMINOS[tetrominoType].getNumRotations()),
     rotation(r),
     x(x),
     y(y)
@@ -37,11 +37,11 @@ TetrominoType MoveableTetromino::getTetrominoType() const {
 }
 
 Tetromino MoveableTetromino::getTetromino() const {
-    return tetrominoMap[this->tetrominoType];
+    return TETROMINOS[this->tetrominoType];
 }
 
 Grid<4,4> MoveableTetromino::getGridAtCurrentRotation() const {
-    return tetrominoMap[this->tetrominoType].getRotation(this->rotation);
+    return TETROMINOS[this->tetrominoType].getRotation(this->rotation);
 }
 
 void MoveableTetromino::blitToTetrisBoard(TetrisBoard& tetrisBoard) const {
@@ -78,8 +78,8 @@ TetrisBoard MoveableTetromino::getAsTetrisBoard() const {
 // based on the min and max x and y indices of the tetromino, check if it is in bounds
 bool MoveableTetromino::isInBounds() const {
     const Grid<4,4> grid = this->getGridAtCurrentRotation();
-    const int maxXIndex = tetrominoMap[this->tetrominoType].getMaxXIndex(this->rotation);
-    const int maxYIndex = tetrominoMap[this->tetrominoType].getMaxYIndex(this->rotation);
+    const int maxXIndex = TETROMINOS[this->tetrominoType].getMaxXIndex(this->rotation);
+    const int maxYIndex = TETROMINOS[this->tetrominoType].getMaxYIndex(this->rotation);
 
     const int relMinX = this->x;
     const int relMaxX = this->x + maxXIndex;

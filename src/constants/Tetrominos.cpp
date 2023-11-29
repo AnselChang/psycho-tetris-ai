@@ -24,62 +24,62 @@ Tetromino I_PIECE(I_TYPE, {
 
 Tetromino J_PIECE(J_TYPE, {
     Grid<4, 4>({
-        0b1000,
-        0b1110,
+        0b0111,
+        0b0100,
         0b0000,
         0b0000
     }),
     Grid<4, 4>({
-        0b0110,
-        0b0100,
-        0b0100,
-        0b0000
-    }),
-    Grid<4, 4>({
-        0b0000,
-        0b1110,
         0b0010,
+        0b0010,
+        0b0011,
         0b0000
     }),
     Grid<4, 4>({
-        0b0100,
-        0b0100,
-        0b1100,
+        0b0001,
+        0b0111,
+        0b0000,
+        0b0000
+    }),
+    Grid<4, 4>({
+        0b0011,
+        0b0001,
+        0b0001,
         0b0000
     }),
 });
 
 Tetromino L_PIECE(L_TYPE, {
     Grid<4, 4>({
+        0b0111,
+        0b0001,
+        0b0000,
+        0b0000
+    }),
+    Grid<4, 4>({
+        0b0011,
         0b0010,
-        0b1110,
+        0b0010,
+        0b0000
+    }),
+    Grid<4, 4>({
+        0b0100,
+        0b0111,
         0b0000,
         0b0000
     }),
     Grid<4, 4>({
-        0b0100,
-        0b0100,
-        0b0110,
-        0b0000
-    }),
-    Grid<4, 4>({
-        0b0000,
-        0b1110,
-        0b1000,
-        0b0000
-    }),
-    Grid<4, 4>({
-        0b1100,
-        0b0100,
-        0b0100,
+        0b0001,
+        0b0001,
+        0b0011,
         0b0000
     }),
 });
 
 Tetromino O_PIECE(O_TYPE, {
     Grid<4, 4>({
-        0b1100,
-        0b1100,
+        0b0011,
+        0b0011,
         0b0000,
         0b0000
     }),
@@ -88,13 +88,13 @@ Tetromino O_PIECE(O_TYPE, {
 Tetromino S_PIECE(S_TYPE, {
     Grid<4, 4>({
         0b0110,
-        0b1100,
+        0b0011,
         0b0000,
         0b0000
     }),
     Grid<4, 4>({
-        0b0100,
-        0b0110,
+        0b0001,
+        0b0011,
         0b0010,
         0b0000
     }),
@@ -102,47 +102,47 @@ Tetromino S_PIECE(S_TYPE, {
 
 Tetromino T_PIECE(T_TYPE, {
     Grid<4, 4>({
-        0b0100,
-        0b1110,
+        0b0111,
+        0b0010,
         0b0000,
         0b0000
     }),
     Grid<4, 4>({
-        0b0100,
-        0b0110,
-        0b0100,
+        0b0010,
+        0b0011,
+        0b0010,
         0b0000
     }),
     Grid<4, 4>({
+        0b0010,
+        0b0111,
         0b0000,
-        0b1110,
-        0b0100,
         0b0000
     }),
     Grid<4, 4>({
-        0b0100,
-        0b1100,
-        0b0100,
+        0b0001,
+        0b0011,
+        0b0001,
         0b0000
     }),
 });
 
 Tetromino Z_PIECE(Z_TYPE, {
     Grid<4, 4>({
-        0b1100,
+        0b0011,
         0b0110,
         0b0000,
         0b0000
     }),
     Grid<4, 4>({
         0b0010,
-        0b0110,
-        0b0100,
+        0b0011,
+        0b0001,
         0b0000
     }),
 });
 
-std::map<TetrominoType, Tetromino> tetrominoMap = {
+std::map<TetrominoType, Tetromino> TETROMINOS = {
     {I_TYPE, I_PIECE},
     {J_TYPE, J_PIECE},
     {L_TYPE, L_PIECE},
@@ -150,4 +150,14 @@ std::map<TetrominoType, Tetromino> tetrominoMap = {
     {S_TYPE, S_PIECE},
     {T_TYPE, T_PIECE},
     {Z_TYPE, Z_PIECE}
+};
+
+std::map<TetrominoType, std::string> TETROMINO_NAMES = {
+    {I_TYPE, "I"},
+    {J_TYPE, "J"},
+    {L_TYPE, "L"},
+    {O_TYPE, "O"},
+    {S_TYPE, "S"},
+    {T_TYPE, "T"},
+    {Z_TYPE, "Z"}
 };
