@@ -149,6 +149,30 @@ Psycho/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/build
 .PHONY : Psycho/fast
 
+src/constants/GameSpeed.o: src/constants/GameSpeed.cpp.o
+.PHONY : src/constants/GameSpeed.o
+
+# target to build an object file
+src/constants/GameSpeed.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o
+.PHONY : src/constants/GameSpeed.cpp.o
+
+src/constants/GameSpeed.i: src/constants/GameSpeed.cpp.i
+.PHONY : src/constants/GameSpeed.i
+
+# target to preprocess a source file
+src/constants/GameSpeed.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.i
+.PHONY : src/constants/GameSpeed.cpp.i
+
+src/constants/GameSpeed.s: src/constants/GameSpeed.cpp.s
+.PHONY : src/constants/GameSpeed.s
+
+# target to generate assembly for a file
+src/constants/GameSpeed.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.s
+.PHONY : src/constants/GameSpeed.cpp.s
+
 src/constants/Tetrominos.o: src/constants/Tetrominos.cpp.o
 .PHONY : src/constants/Tetrominos.o
 
@@ -269,6 +293,30 @@ src/models/Tetromino.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.s
 .PHONY : src/models/Tetromino.cpp.s
 
+src/simulation/ActionFrame.o: src/simulation/ActionFrame.cpp.o
+.PHONY : src/simulation/ActionFrame.o
+
+# target to build an object file
+src/simulation/ActionFrame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o
+.PHONY : src/simulation/ActionFrame.cpp.o
+
+src/simulation/ActionFrame.i: src/simulation/ActionFrame.cpp.i
+.PHONY : src/simulation/ActionFrame.i
+
+# target to preprocess a source file
+src/simulation/ActionFrame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.i
+.PHONY : src/simulation/ActionFrame.cpp.i
+
+src/simulation/ActionFrame.s: src/simulation/ActionFrame.cpp.s
+.PHONY : src/simulation/ActionFrame.s
+
+# target to generate assembly for a file
+src/simulation/ActionFrame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.s
+.PHONY : src/simulation/ActionFrame.cpp.s
+
 src/simulation/InputSequence.o: src/simulation/InputSequence.cpp.o
 .PHONY : src/simulation/InputSequence.o
 
@@ -304,6 +352,9 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... Psycho"
+	@echo "... src/constants/GameSpeed.o"
+	@echo "... src/constants/GameSpeed.i"
+	@echo "... src/constants/GameSpeed.s"
 	@echo "... src/constants/Tetrominos.o"
 	@echo "... src/constants/Tetrominos.i"
 	@echo "... src/constants/Tetrominos.s"
@@ -319,6 +370,9 @@ help:
 	@echo "... src/models/Tetromino.o"
 	@echo "... src/models/Tetromino.i"
 	@echo "... src/models/Tetromino.s"
+	@echo "... src/simulation/ActionFrame.o"
+	@echo "... src/simulation/ActionFrame.i"
+	@echo "... src/simulation/ActionFrame.s"
 	@echo "... src/simulation/InputSequence.o"
 	@echo "... src/simulation/InputSequence.i"
 	@echo "... src/simulation/InputSequence.s"

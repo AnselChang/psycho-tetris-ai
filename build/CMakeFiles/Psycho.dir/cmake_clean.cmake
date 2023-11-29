@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o"
+  "CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o"
   "CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/main.cpp.o"
@@ -9,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o"
   "CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o.d"
+  "CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o"
+  "CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o"
   "CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o.d"
   "Psycho"

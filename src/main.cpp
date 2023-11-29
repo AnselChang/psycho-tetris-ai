@@ -3,17 +3,12 @@
 #include "constants/Tetrominos.h"
 #include "constants/TetrominoType.h"
 #include "models/MoveableTetromino.h"
+#include "simulation/ActionFrame.h"
 
 int main() {
 
-    std::cout << "Hello, Wld!" << std::endl;
-
-    // iterate over all tetrominoMap
-    for (auto const& tetromino : TETROMINOS) {
-        std::cout << TETROMINO_NAMES[tetromino.first] << std::endl;
-        tetromino.second.display();
-    }
-
+    ActionFrames frames(InputSequence("X.."), 19);
+    frames.display();
 
     return 0;
 }
