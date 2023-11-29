@@ -5,8 +5,9 @@ TetrisBoard::TetrisBoard() {
 
 }
 
-TetrisBoard::TetrisBoard(std::initializer_list<std::bitset<width>> rows):
-    grid(rows) {}
+TetrisBoard::TetrisBoard(Grid<width, height> grid): grid(grid) {
+
+}
 
 void TetrisBoard::set(int x, int y, bool value) {
     grid.set(x, y, value);

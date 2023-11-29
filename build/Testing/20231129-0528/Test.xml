@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="Darwin-aarch64-apple-darwin20-g++-11"
-	BuildStamp="20231128-1043-Experimental"
+	BuildStamp="20231129-0528-Experimental"
 	Name="Ansels-MacBook-Air-2.local"
 	Generator="ctest-3.22.3"
 	CompilerName="/opt/homebrew/bin/aarch64-apple-darwin20-g++-11"
@@ -24,11 +24,11 @@
 	ProcessorClockFrequency="0"
 	>
 	<Testing>
-		<StartDateTime>Nov 28 07:16 EST</StartDateTime>
-		<StartTestTime>1701173782</StartTestTime>
+		<StartDateTime>Nov 29 00:28 EST</StartDateTime>
+		<StartTestTime>1701235729</StartTestTime>
 		<TestList/>
-		<EndDateTime>Nov 28 07:16 EST</EndDateTime>
-		<EndTestTime>1701173782</EndTestTime>
+		<EndDateTime>Nov 29 00:28 EST</EndDateTime>
+		<EndTestTime>1701235729</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

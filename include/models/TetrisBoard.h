@@ -19,7 +19,7 @@ public:
 
     // constructor that takes in a list of rows
     TetrisBoard();
-    TetrisBoard(std::initializer_list<std::bitset<width>> rows);
+    TetrisBoard(Grid<width, height> grid);
 
 
     void set(int x, int y, bool value);
