@@ -23,6 +23,10 @@ public:
 
 
     Grid<width, height>& getGrid();
+    std::bitset<width> getRow(int y) const;
+    bool get(int x, int y) const;
+    void display() const;
+    
 };
 
 #endif // TETRISBOARD_H
