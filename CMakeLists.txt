@@ -17,6 +17,7 @@ set(SOURCES
     src/models/MoveableTetromino.cpp
     src/simulation/InputSequence.cpp
     src/simulation/ActionFrame.cpp
+    src/simulation/MoveGeneration.cpp
     src/constants/Tetrominos.cpp
     src/constants/GameSpeed.cpp
     src/main.cpp

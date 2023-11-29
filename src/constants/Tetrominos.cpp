@@ -9,18 +9,18 @@
 
 Tetromino I_PIECE(I_TYPE, {
     Grid<4, 4>({
-        0b1111,
         0b0000,
+        0b1111,
         0b0000,
         0b0000
     }),
     Grid<4, 4>({
-        0b0001,
-        0b0001,
-        0b0001,
-        0b0001
+        0b0100,
+        0b0100,
+        0b0100,
+        0b0100
     }),
-});
+}, 3);
 
 Tetromino J_PIECE(J_TYPE, {
     Grid<4, 4>({
@@ -47,7 +47,7 @@ Tetromino J_PIECE(J_TYPE, {
         0b0001,
         0b0000
     }),
-});
+}, 4);
 
 Tetromino L_PIECE(L_TYPE, {
     Grid<4, 4>({
@@ -74,7 +74,7 @@ Tetromino L_PIECE(L_TYPE, {
         0b0011,
         0b0000
     }),
-});
+}, 4);
 
 Tetromino O_PIECE(O_TYPE, {
     Grid<4, 4>({
@@ -83,7 +83,7 @@ Tetromino O_PIECE(O_TYPE, {
         0b0000,
         0b0000
     }),
-});
+}, 4);
 
 Tetromino S_PIECE(S_TYPE, {
     Grid<4, 4>({
@@ -98,7 +98,7 @@ Tetromino S_PIECE(S_TYPE, {
         0b0010,
         0b0000
     }),
-});
+}, 4);
 
 Tetromino T_PIECE(T_TYPE, {
     Grid<4, 4>({
@@ -125,7 +125,7 @@ Tetromino T_PIECE(T_TYPE, {
         0b0001,
         0b0000
     }),
-});
+}, 4);
 
 Tetromino Z_PIECE(Z_TYPE, {
     Grid<4, 4>({
@@ -140,7 +140,7 @@ Tetromino Z_PIECE(Z_TYPE, {
         0b0001,
         0b0000
     }),
-});
+}, 4);
 
 std::map<TetrominoType, Tetromino> TETROMINOS = {
     {I_TYPE, I_PIECE},

@@ -19,18 +19,23 @@ private:
     std::vector<int> maxXIndex; // the maximum x index for each rotation
     std::vector<int> maxYIndex; // the maximum y index for each rotation
 
+    const int spawnX;
+
 public:
-    Tetromino(TetrominoType type, std::vector<Grid<4, 4>> rotations);
+    Tetromino(TetrominoType type, std::vector<Grid<4, 4>> rotations, int spawnX);
 
     Tetromino();
 
     TetrominoType getType() const;
     Grid<4,4> getRotation(int rotation) const;
     int getNumRotations() const;
+    int getSpawnX() const;
 
     // returns the maximum x and y index for the given rotation
     int getMaxXIndex(int rotation) const;
     int getMaxYIndex(int rotation) const;
+
+
 
 
     void display() const;

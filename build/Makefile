@@ -341,6 +341,30 @@ src/simulation/InputSequence.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.s
 .PHONY : src/simulation/InputSequence.cpp.s
 
+src/simulation/MoveGeneration.o: src/simulation/MoveGeneration.cpp.o
+.PHONY : src/simulation/MoveGeneration.o
+
+# target to build an object file
+src/simulation/MoveGeneration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.o
+.PHONY : src/simulation/MoveGeneration.cpp.o
+
+src/simulation/MoveGeneration.i: src/simulation/MoveGeneration.cpp.i
+.PHONY : src/simulation/MoveGeneration.i
+
+# target to preprocess a source file
+src/simulation/MoveGeneration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.i
+.PHONY : src/simulation/MoveGeneration.cpp.i
+
+src/simulation/MoveGeneration.s: src/simulation/MoveGeneration.cpp.s
+.PHONY : src/simulation/MoveGeneration.s
+
+# target to generate assembly for a file
+src/simulation/MoveGeneration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.s
+.PHONY : src/simulation/MoveGeneration.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -376,6 +400,9 @@ help:
 	@echo "... src/simulation/InputSequence.o"
 	@echo "... src/simulation/InputSequence.i"
 	@echo "... src/simulation/InputSequence.s"
+	@echo "... src/simulation/MoveGeneration.o"
+	@echo "... src/simulation/MoveGeneration.i"
+	@echo "... src/simulation/MoveGeneration.s"
 .PHONY : help
 
 

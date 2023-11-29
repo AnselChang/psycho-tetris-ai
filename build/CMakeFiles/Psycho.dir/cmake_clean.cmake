@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o"
   "CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o.d"
+  "CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.o"
+  "CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.o.d"
   "Psycho"
   "Psycho.pdb"
 )

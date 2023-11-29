@@ -2,10 +2,15 @@
 #include "constants/GameSpeed.h"
 #include "simulation/InputSequence.h"
 
+enum Action {
+    INPUT,
+    DROP
+};
+
 // a single frame for which an action can be taken and/or the piece drops due to gravity
 struct ActionFrame {
-    bool isInput;
-    bool isDrop;
+    int frameIndex;
+    Action action;
 };
 
 class ActionFrames {
@@ -16,7 +21,7 @@ private:
 public:
     ActionFrames(const InputSequence& sequence, int level);
 
-    ActionFrame get(int index) const;
+    ActionFrame get(int index) const; // get ActionFrame index (not frame index)
     int size() const;
     void display() const;
 
