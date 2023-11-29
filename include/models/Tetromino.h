@@ -16,6 +16,8 @@ private:
 
     // tetris board for each rotation. pieces have up to four possible rotations
     std::vector<Grid<4, 4>> rotations;
+    std::vector<int> minXIndex; // the minimum x index for each rotation
+    std::vector<int> minYIndex; // the minimum y index for each rotation
     std::vector<int> maxXIndex; // the maximum x index for each rotation
     std::vector<int> maxYIndex; // the maximum y index for each rotation
 
@@ -32,6 +34,8 @@ public:
     int getSpawnX() const;
 
     // returns the maximum x and y index for the given rotation
+    int getMinXIndex(int rotation) const;
+    int getMinYIndex(int rotation) const;
     int getMaxXIndex(int rotation) const;
     int getMaxYIndex(int rotation) const;
 

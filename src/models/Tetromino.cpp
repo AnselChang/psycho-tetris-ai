@@ -29,6 +29,28 @@ Tetromino::Tetromino(TetrominoType type, std::vector<Grid<4,4>> rotations, int s
         this->maxXIndex.push_back(maxX);
         this->maxYIndex.push_back(maxY);
     }
+
+    // calculate the min x and y indices for each rotation
+    for (int i = 0; i < rotations.size(); i++) {
+        int minX = 3;
+        int minY = 3;
+        for (int y = 0; y < 4; y++) {
+            auto row = rotations[i].getRow(y).to_ulong();
+            for (int x = 3; x >= 0; x--) {
+                if (row & (1 << x)) {
+                    if (x < minX) {
+                        minX = x;
+                    }
+                    if (y < minY) {
+                        minY = y;
+                    }
+                }
+            }
+        }
+        this->minXIndex.push_back(minX);
+        this->minYIndex.push_back(minY);
+    }
+
 }
 
 TetrominoType Tetromino::getType() const {
@@ -41,6 +63,14 @@ Grid<4,4> Tetromino::getRotation(int rotation) const {
 
 int Tetromino::getNumRotations() const {
     return this->rotations.size();
+}
+
+int Tetromino::getMinXIndex(int rotation) const {
+    return this->minXIndex[rotation];
+}
+
+int Tetromino::getMinYIndex(int rotation) const {
+    return this->minYIndex[rotation];
 }
 
 int Tetromino::getMaxXIndex(int rotation) const {

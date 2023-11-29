@@ -7,8 +7,11 @@
 
 int main() {
 
-    ActionFrames frames(InputSequence("X.."), 19);
-    frames.display();
+    for (int i = 0; i < 7; i++) {
+        TetrominoType type = TetrominoType(i);
+        std::cout << TETROMINO_NAMES[type] << std::endl;
+        TETROMINOS[type].display();
+    }
 
     return 0;
 }

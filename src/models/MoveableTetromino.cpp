@@ -78,12 +78,14 @@ TetrisBoard MoveableTetromino::getAsTetrisBoard() const {
 // based on the min and max x and y indices of the tetromino, check if it is in bounds
 bool MoveableTetromino::isInBounds() const {
     const Grid<4,4> grid = this->getGridAtCurrentRotation();
+    const int minXIndex = TETROMINOS[this->tetrominoType].getMinXIndex(this->rotation);
+    const int minYIndex = TETROMINOS[this->tetrominoType].getMinYIndex(this->rotation);
     const int maxXIndex = TETROMINOS[this->tetrominoType].getMaxXIndex(this->rotation);
     const int maxYIndex = TETROMINOS[this->tetrominoType].getMaxYIndex(this->rotation);
 
-    const int relMinX = this->x;
+    const int relMinX = this->x + minXIndex;
     const int relMaxX = this->x + maxXIndex;
-    const int relMinY = this->y;
+    const int relMinY = this->y + minYIndex;
     const int relMaxY = this->y + maxYIndex;
 
     std::cout << "relMinX: " << relMinX << std::endl;
