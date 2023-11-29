@@ -10,6 +10,10 @@ project (Psycho)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+
+
 # Create a sources variable with a link to all cpp files to compile
 set(SOURCES
     src/models/TetrisBoard.cpp
@@ -18,6 +22,7 @@ set(SOURCES
     src/simulation/InputSequence.cpp
     src/simulation/ActionFrame.cpp
     src/simulation/MoveGeneration.cpp
+    src/search/TwoPieceSearch.cpp
     src/constants/Tetrominos.cpp
     src/constants/GameSpeed.cpp
     src/main.cpp

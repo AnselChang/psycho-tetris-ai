@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o"
   "CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o.d"
+  "CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o"
+  "CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o"
   "CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o.d"
   "CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o"

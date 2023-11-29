@@ -5,7 +5,10 @@
 #include <array>
 #include <initializer_list>
 #include <vector>
+#include <optional>
 #include "models/Grid.h"
+
+class MoveableTetromino;
 
 class TetrisBoard {
 private:
@@ -26,6 +29,7 @@ public:
     std::bitset<width> getRow(int y) const;
     bool get(int x, int y) const;
     void display() const;
+    void displayWithPiece(MoveableTetromino* mt = nullptr, MoveableTetromino* mt2 = nullptr) const;
 
     // run any line clears and return the number of lines cleared
     int clearLines();

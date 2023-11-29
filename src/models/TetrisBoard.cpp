@@ -1,4 +1,5 @@
 #include "models/TetrisBoard.h"
+#include "models/MoveableTetromino.h"
 #include <iostream>
 
 TetrisBoard::TetrisBoard() {
@@ -23,6 +24,30 @@ bool TetrisBoard::get(int x, int y) const {
 
 void TetrisBoard::display() const {
     this->grid.display();
+}
+
+void TetrisBoard::displayWithPiece(MoveableTetromino* mt, MoveableTetromino* mt2) const {
+    Grid<10, 20> grid = this->grid;
+
+    Grid<10, 20>* p1 = mt ? &(mt->getAsTetrisBoard().getGrid()) : nullptr;
+    Grid<10, 20>* p2 = mt2 ? &(mt2->getAsTetrisBoard().getGrid()) : nullptr;
+
+    for (int y = 0; y < 20; y++) {
+        for (int x = 0; x < 10; x++) {
+
+            char c = '.';
+            if (grid.get(x, y)) {
+                c = 'X';
+            } else if (p1 && p1->get(x,y)) {
+                c = '1';
+            } else if (p2 && p2->get(x,y)) {
+                c = '2';
+            }
+            std::cout << c << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
 }
 
 // run any line clears and return the number of lines cleared

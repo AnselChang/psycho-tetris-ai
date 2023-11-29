@@ -293,6 +293,30 @@ src/models/Tetromino.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.s
 .PHONY : src/models/Tetromino.cpp.s
 
+src/search/TwoPieceSearch.o: src/search/TwoPieceSearch.cpp.o
+.PHONY : src/search/TwoPieceSearch.o
+
+# target to build an object file
+src/search/TwoPieceSearch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o
+.PHONY : src/search/TwoPieceSearch.cpp.o
+
+src/search/TwoPieceSearch.i: src/search/TwoPieceSearch.cpp.i
+.PHONY : src/search/TwoPieceSearch.i
+
+# target to preprocess a source file
+src/search/TwoPieceSearch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.i
+.PHONY : src/search/TwoPieceSearch.cpp.i
+
+src/search/TwoPieceSearch.s: src/search/TwoPieceSearch.cpp.s
+.PHONY : src/search/TwoPieceSearch.s
+
+# target to generate assembly for a file
+src/search/TwoPieceSearch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.s
+.PHONY : src/search/TwoPieceSearch.cpp.s
+
 src/simulation/ActionFrame.o: src/simulation/ActionFrame.cpp.o
 .PHONY : src/simulation/ActionFrame.o
 
@@ -394,6 +418,9 @@ help:
 	@echo "... src/models/Tetromino.o"
 	@echo "... src/models/Tetromino.i"
 	@echo "... src/models/Tetromino.s"
+	@echo "... src/search/TwoPieceSearch.o"
+	@echo "... src/search/TwoPieceSearch.i"
+	@echo "... src/search/TwoPieceSearch.s"
 	@echo "... src/simulation/ActionFrame.o"
 	@echo "... src/simulation/ActionFrame.i"
 	@echo "... src/simulation/ActionFrame.s"

@@ -153,10 +153,24 @@ CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.s"
 	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anselchang/LocalFiles/psycho-ai/src/simulation/MoveGeneration.cpp -o CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.s
 
+CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o: CMakeFiles/Psycho.dir/flags.make
+CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o: ../src/search/TwoPieceSearch.cpp
+CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o: CMakeFiles/Psycho.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o -MF CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o.d -o CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/search/TwoPieceSearch.cpp
+
+CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.i"
+	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anselchang/LocalFiles/psycho-ai/src/search/TwoPieceSearch.cpp > CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.i
+
+CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.s"
+	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anselchang/LocalFiles/psycho-ai/src/search/TwoPieceSearch.cpp -o CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.s
+
 CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o: CMakeFiles/Psycho.dir/flags.make
 CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o: ../src/constants/Tetrominos.cpp
 CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o: CMakeFiles/Psycho.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o"
 	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o -MF CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o.d -o CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/constants/Tetrominos.cpp
 
 CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.s: cmake_force
 CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o: CMakeFiles/Psycho.dir/flags.make
 CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o: ../src/constants/GameSpeed.cpp
 CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o: CMakeFiles/Psycho.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o"
 	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o -MF CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o.d -o CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/constants/GameSpeed.cpp
 
 CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.s: cmake_force
 CMakeFiles/Psycho.dir/src/main.cpp.o: CMakeFiles/Psycho.dir/flags.make
 CMakeFiles/Psycho.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Psycho.dir/src/main.cpp.o: CMakeFiles/Psycho.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Psycho.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Psycho.dir/src/main.cpp.o"
 	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Psycho.dir/src/main.cpp.o -MF CMakeFiles/Psycho.dir/src/main.cpp.o.d -o CMakeFiles/Psycho.dir/src/main.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/main.cpp
 
 CMakeFiles/Psycho.dir/src/main.cpp.i: cmake_force
@@ -203,6 +217,7 @@ Psycho_OBJECTS = \
 "CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o" \
 "CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o" \
 "CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.o" \
+"CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o" \
 "CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o" \
 "CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o" \
 "CMakeFiles/Psycho.dir/src/main.cpp.o"
@@ -216,12 +231,13 @@ Psycho: CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.o
+Psycho: CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/main.cpp.o
 Psycho: CMakeFiles/Psycho.dir/build.make
 Psycho: CMakeFiles/Psycho.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Psycho"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Psycho"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Psycho.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

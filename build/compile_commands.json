@@ -1,47 +1,52 @@
 [
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/TetrisBoard.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/TetrisBoard.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/models/TetrisBoard.cpp"
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/Tetromino.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/Tetromino.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/models/Tetromino.cpp"
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/MoveableTetromino.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/MoveableTetromino.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/models/MoveableTetromino.cpp"
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/simulation/InputSequence.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/simulation/InputSequence.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/simulation/InputSequence.cpp"
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/simulation/ActionFrame.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/simulation/ActionFrame.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/simulation/ActionFrame.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/simulation/ActionFrame.cpp"
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/simulation/MoveGeneration.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/simulation/MoveGeneration.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/simulation/MoveGeneration.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/simulation/MoveGeneration.cpp"
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/constants/Tetrominos.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/search/TwoPieceSearch.cpp",
+  "file": "/Users/anselchang/LocalFiles/psycho-ai/src/search/TwoPieceSearch.cpp"
+},
+{
+  "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/constants/Tetrominos.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/constants/Tetrominos.cpp"
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/constants/GameSpeed.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/constants/GameSpeed.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/constants/GameSpeed.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/constants/GameSpeed.cpp"
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/main.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/main.cpp",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/main.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/main.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/main.cpp"
 }
 ]
