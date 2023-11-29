@@ -22,9 +22,7 @@ public:
     TetrisBoard(Grid<width, height> grid);
 
 
-    void set(int x, int y, bool value);
-    bool get(int x, int y) const;
-    void display() const;
+    Grid<width, height>& getGrid();
 };
 
 #endif // TETRISBOARD_H

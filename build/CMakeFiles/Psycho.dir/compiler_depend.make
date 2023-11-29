@@ -181,6 +181,36 @@ CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o: ../src/constants/Tetromino
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_vector.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_bvector.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/vector.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/iostream \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ostream \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ios \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/exception \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/exception_ptr.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/cxxabi_init_exception.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/lib/gcc/11/gcc/aarch64-apple-darwin20/11/include/stddef.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/typeinfo \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/nested_exception.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ios_base.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_classes.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_classes.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/system_error \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/error_constants.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/stdexcept \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/streambuf \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/streambuf.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/basic_ios.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_facets.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/cwctype \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctrans_t.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/ctype_base.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/streambuf_iterator.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/ctype_inline.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_facets.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/basic_ios.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ostream.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/istream \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/istream.tcc \
   ../include/models/Tetromino.h \
   ../include/constants/TetrominoType.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/map \
@@ -405,20 +435,32 @@ CMakeFiles/Psycho.dir/src/main.cpp.o: ../src/main.cpp \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_vector.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_bvector.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/vector.tcc \
-  ../include/models/Grid.h
-
-CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: ../src/models/Grid.cpp \
   ../include/models/Grid.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bitset \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/string \
+  ../include/constants/Tetrominos.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/map \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_tree.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/aligned_buffer.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/node_handle.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_map.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/tuple \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/uses_allocator.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/invoke.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_multimap.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/erase_if.h \
+  ../include/models/Tetromino.h \
+  ../include/constants/TetrominoType.h \
+  ../include/models/MoveableTetromino.h
+
+CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o: ../src/models/MoveableTetromino.cpp \
+  ../include/models/MoveableTetromino.h \
+  ../include/constants/TetrominoType.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/map \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_tree.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_algobase.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/c++config.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/os_defines.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/cpu_defines.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/pstl/pstl_config.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stringfwd.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/memoryfwd.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/char_traits.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_algobase.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/functexcept.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/exception_defines.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/cpp_type_traits.h \
@@ -435,6 +477,36 @@ CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: ../src/models/Grid.cpp \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ptr_traits.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/debug/debug.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/predefined_ops.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/allocator.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/c++allocator.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/new_allocator.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/new \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/exception.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/memoryfwd.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_function.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/backward/binders.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/alloc_traits.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/alloc_traits.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_construct.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/aligned_buffer.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/node_handle.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_map.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/initializer_list \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/tuple \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/utility \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_relops.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/array \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/range_access.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/uses_allocator.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/invoke.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_multimap.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/erase_if.h \
+  ../include/models/Tetromino.h \
+  ../include/models/Grid.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bitset \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/string \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stringfwd.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/char_traits.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/postypes.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/cwchar \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
@@ -495,11 +567,6 @@ CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: ../src/models/Grid.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint64_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_intmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uintmax_t.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/allocator.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/c++allocator.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/new_allocator.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/new \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/exception.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/localefwd.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/c++locale.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/clocale \
@@ -509,10 +576,6 @@ CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: ../src/models/Grid.cpp \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/cctype \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ostream_insert.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/cxxabi_forced.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_function.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/backward/binders.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/range_access.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/initializer_list \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/basic_string.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/atomicity.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/gthr.h \
@@ -535,9 +598,6 @@ CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: ../src/models/Grid.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mach_port_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigset_t.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/atomic_word.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/alloc_traits.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/alloc_traits.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_construct.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/string_view \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/functional_hash.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/hash_bytes.h \
@@ -579,9 +639,6 @@ CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: ../src/models/Grid.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_errno_t.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/charconv.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/basic_string.tcc \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/array \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/utility \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_relops.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/vector \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_uninitialized.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_vector.h \
@@ -616,7 +673,9 @@ CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: ../src/models/Grid.cpp \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/basic_ios.tcc \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ostream.tcc \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/istream \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/istream.tcc
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/istream.tcc \
+  ../include/models/TetrisBoard.h \
+  ../include/constants/Tetrominos.h
 
 CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o: ../src/models/TetrisBoard.cpp \
   ../include/models/TetrisBoard.h \
@@ -1021,10 +1080,52 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_uninitialized.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_vector.h \
   /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_bvector.h \
-  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/vector.tcc
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/vector.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/iostream \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ostream \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ios \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/exception \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/exception_ptr.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/cxxabi_init_exception.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/lib/gcc/11/gcc/aarch64-apple-darwin20/11/include/stddef.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/typeinfo \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/nested_exception.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ios_base.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_classes.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_classes.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/system_error \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/error_constants.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/stdexcept \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/streambuf \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/streambuf.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/basic_ios.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_facets.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/cwctype \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctrans_t.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/ctype_base.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/streambuf_iterator.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/ctype_inline.h \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_facets.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/basic_ios.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ostream.tcc \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/istream \
+  /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/istream.tcc
 
 
 ../src/models/TetrisBoard.cpp:
+
+../src/main.cpp:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/erase_if.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_multimap.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/uses_allocator.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/node_handle.h:
+
+../include/constants/TetrominoType.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/istream.tcc:
 
@@ -1040,49 +1141,23 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/basic_ios.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/streambuf.tcc:
-
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/streambuf:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/stdexcept:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/system_error:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_classes.h:
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/stdexcept:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/array:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_classes.tcc:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ios_base.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/typeinfo:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uintmax_t.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/lib/gcc/11/gcc/aarch64-apple-darwin20/11/include/stddef.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/exception:
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/exception_ptr.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ios:
-
-../src/main.cpp:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/exception_defines.h:
-
-../include/constants/Tetrominos.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_multimap.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/machine/_structs.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/invoke.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/uses_allocator.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/node_handle.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_construct.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_tree.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/error_constants.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/map:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_bvector.h:
 
@@ -1114,6 +1189,10 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/std_abs.h:
 
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ostream_insert.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/cxxabi_init_exception.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mode_t.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/basic_string.h:
@@ -1130,9 +1209,9 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/endian.h:
 
-../include/constants/TetrominoType.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/endian.h:
+
+../include/models/MoveableTetromino.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/_mcontext.h:
 
@@ -1156,15 +1235,17 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h:
 
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_classes.h:
+
 ../include/models/Grid.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/cstdlib:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/string_conversions.h:
 
-../src/models/Grid.cpp:
-
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/hash_bytes.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/lib/gcc/11/gcc/aarch64-apple-darwin20/11/include/stddef.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/string_view:
 
@@ -1178,9 +1259,9 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/alloc_traits.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/nested_exception.h:
-
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/gthr.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/nested_exception.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/string_view.tcc:
 
@@ -1216,6 +1297,8 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/typeinfo:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/vector:
@@ -1242,9 +1325,7 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/cxxabi_forced.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/cxxabi_init_exception.h:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/ostream_insert.h:
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/exception:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
 
@@ -1264,10 +1345,6 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/exception_ptr.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uintmax_t.h:
-
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/cctype:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/functional_hash.h:
@@ -1277,12 +1354,6 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_intmax_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/_types.h:
-
-../include/models/Tetromino.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/_mcontext.h:
 
@@ -1306,11 +1377,9 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/ctype.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/locale_classes.tcc:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/array:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/malloc/_malloc.h:
+
+../src/models/MoveableTetromino.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_wctype.h:
 
@@ -1348,19 +1417,27 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_intptr_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_int64_t.h:
+../include/models/Tetromino.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/tuple:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/types.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/_types.h:
 
 ../src/models/Tetromino.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctype_t.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/tuple:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_int64_t.h:
 
 ../include/models/TetrisBoard.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_int16_t.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/streambuf.tcc:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_dev_t.h:
 
@@ -1370,11 +1447,13 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/locale.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/erase_if.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/lib/gcc/11/gcc/aarch64-apple-darwin20/11/include-fixed/stdio.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_tree.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_construct.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mbstate_t.h:
 
@@ -1390,13 +1469,13 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h:
 
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/cwchar:
-
-/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_map.h:
-
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_iterator_base_types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint64_t.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/map:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/error_constants.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bitset:
 
@@ -1424,11 +1503,19 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/aarch64-apple-darwin20/bits/c++config.h:
 
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_map.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/cwchar:
+
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/debug/debug.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/stl_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_time_t.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/invoke.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/machine/_structs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ssize_t.h:
 
@@ -1445,6 +1532,10 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_off_t.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/ext/type_traits.h:
+
+../include/constants/Tetrominos.h:
+
+/opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/exception_defines.h:
 
 /opt/homebrew/Cellar/gcc/11.2.0_3/include/c++/11/bits/functexcept.h:
 

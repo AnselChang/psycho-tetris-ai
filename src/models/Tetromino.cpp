@@ -1,6 +1,10 @@
 #include "models/Tetromino.h"
 #include "models/Grid.h"
 
+Tetromino::Tetromino():
+    type(UNDEFINED_TYPE)
+{}
+
 Tetromino::Tetromino(TetrominoType type, std::vector<Grid<4,4>> rotations) {
     this->type = type;
     this->rotations = rotations;

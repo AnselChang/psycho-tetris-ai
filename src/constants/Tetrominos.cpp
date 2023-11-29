@@ -3,9 +3,11 @@
 #include "constants/Tetrominos.h"
 #include <initializer_list>
 
-// all pieces are 4x4 and as top-left as possible
+// all pieces are represented as 4x4 and as top-left as possible
+// HOWEVER, since the leftmost column is the least significant bit, the pieces are actually
+// defined 4x4 to the and mirrored horizontally here
 
-Tetromino I_PIECE = Tetromino(I_TYPE, {
+Tetromino I_PIECE(I_TYPE, {
     Grid<4, 4>({
         0b1111,
         0b0000,
@@ -13,14 +15,14 @@ Tetromino I_PIECE = Tetromino(I_TYPE, {
         0b0000
     }),
     Grid<4, 4>({
-        0b1000,
-        0b1000,
-        0b1000,
-        0b1000
+        0b0001,
+        0b0001,
+        0b0001,
+        0b0001
     }),
 });
 
-Tetromino J_PIECE = Tetromino(J_TYPE, {
+Tetromino J_PIECE(J_TYPE, {
     Grid<4, 4>({
         0b1000,
         0b1110,
@@ -47,7 +49,7 @@ Tetromino J_PIECE = Tetromino(J_TYPE, {
     }),
 });
 
-Tetromino L_PIECE = Tetromino(L_TYPE, {
+Tetromino L_PIECE(L_TYPE, {
     Grid<4, 4>({
         0b0010,
         0b1110,
@@ -74,7 +76,7 @@ Tetromino L_PIECE = Tetromino(L_TYPE, {
     }),
 });
 
-Tetromino O_PIECE = Tetromino(O_TYPE, {
+Tetromino O_PIECE(O_TYPE, {
     Grid<4, 4>({
         0b1100,
         0b1100,
@@ -83,7 +85,7 @@ Tetromino O_PIECE = Tetromino(O_TYPE, {
     }),
 });
 
-Tetromino S_PIECE = Tetromino(S_TYPE, {
+Tetromino S_PIECE(S_TYPE, {
     Grid<4, 4>({
         0b0110,
         0b1100,
@@ -98,7 +100,7 @@ Tetromino S_PIECE = Tetromino(S_TYPE, {
     }),
 });
 
-Tetromino T_PIECE = Tetromino(T_TYPE, {
+Tetromino T_PIECE(T_TYPE, {
     Grid<4, 4>({
         0b0100,
         0b1110,
@@ -125,7 +127,7 @@ Tetromino T_PIECE = Tetromino(T_TYPE, {
     }),
 });
 
-Tetromino Z_PIECE = Tetromino(Z_TYPE, {
+Tetromino Z_PIECE(Z_TYPE, {
     Grid<4, 4>({
         0b1100,
         0b0110,

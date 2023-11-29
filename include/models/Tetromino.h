@@ -20,6 +20,8 @@ private:
 public:
     Tetromino(TetrominoType type, std::vector<Grid<4, 4>> rotations);
 
+    Tetromino();
+
     TetrominoType getType() const;
     Grid<4,4> getRotation(int rotation) const;
     int getNumRotations() const;

@@ -9,6 +9,7 @@ Stores an nxm grid of cells as a vector of bitboard rows
 #include <array>
 #include <initializer_list>
 #include <vector>
+#include <iostream>
 
 template <int width, int height>
 class Grid {
@@ -18,14 +19,40 @@ private:
 
 public:
 
-    // constructor that takes in a list of rows
-    Grid();
-    Grid(std::initializer_list<std::bitset<width>> rows);
+    Grid() {}
 
+    Grid(std::initializer_list<std::bitset<width>> rows) {
+        int i = 0;
+        for (auto& row : rows) {
+            this->rows[i] = row;
+            i++;
+        }
+    }
 
-    void set(int x, int y, bool value);
-    bool get(int x, int y) const;
-    void display() const;
+    void set(int x, int y, bool value) {
+        rows[y].set(x, value);
+    }
+
+    bool get(int x, int y) const {
+        return rows[y].test(x);
+    }
+
+    void setRow(int y, std::bitset<width> row) {
+        rows[y] = row;
+    }
+
+    std::bitset<width> getRow(int y) const {
+        return rows[y];
+    }
+
+    void display() const {
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; ++x) {
+                std::cout << (get(x, y) ? "X" : ".") << " ";
+            }
+            std::cout << std::endl;
+        }
+    }
 };
 
 #endif // TETRISBOARD_H

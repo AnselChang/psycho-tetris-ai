@@ -197,29 +197,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/models/Grid.o: src/models/Grid.cpp.o
-.PHONY : src/models/Grid.o
+src/models/MoveableTetromino.o: src/models/MoveableTetromino.cpp.o
+.PHONY : src/models/MoveableTetromino.o
 
 # target to build an object file
-src/models/Grid.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Grid.cpp.o
-.PHONY : src/models/Grid.cpp.o
+src/models/MoveableTetromino.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o
+.PHONY : src/models/MoveableTetromino.cpp.o
 
-src/models/Grid.i: src/models/Grid.cpp.i
-.PHONY : src/models/Grid.i
+src/models/MoveableTetromino.i: src/models/MoveableTetromino.cpp.i
+.PHONY : src/models/MoveableTetromino.i
 
 # target to preprocess a source file
-src/models/Grid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Grid.cpp.i
-.PHONY : src/models/Grid.cpp.i
+src/models/MoveableTetromino.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.i
+.PHONY : src/models/MoveableTetromino.cpp.i
 
-src/models/Grid.s: src/models/Grid.cpp.s
-.PHONY : src/models/Grid.s
+src/models/MoveableTetromino.s: src/models/MoveableTetromino.cpp.s
+.PHONY : src/models/MoveableTetromino.s
 
 # target to generate assembly for a file
-src/models/Grid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Grid.cpp.s
-.PHONY : src/models/Grid.cpp.s
+src/models/MoveableTetromino.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.s
+.PHONY : src/models/MoveableTetromino.cpp.s
 
 src/models/TetrisBoard.o: src/models/TetrisBoard.cpp.o
 .PHONY : src/models/TetrisBoard.o
@@ -286,9 +286,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/models/Grid.o"
-	@echo "... src/models/Grid.i"
-	@echo "... src/models/Grid.s"
+	@echo "... src/models/MoveableTetromino.o"
+	@echo "... src/models/MoveableTetromino.i"
+	@echo "... src/models/MoveableTetromino.s"
 	@echo "... src/models/TetrisBoard.o"
 	@echo "... src/models/TetrisBoard.i"
 	@echo "... src/models/TetrisBoard.s"

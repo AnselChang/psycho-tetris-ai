@@ -1,11 +1,6 @@
 [
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
-  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/Grid.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/Grid.cpp",
-  "file": "/Users/anselchang/LocalFiles/psycho-ai/src/models/Grid.cpp"
-},
-{
-  "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
   "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/TetrisBoard.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/models/TetrisBoard.cpp"
 },
@@ -13,6 +8,11 @@
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
   "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/Tetromino.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/models/Tetromino.cpp"
+},
+{
+  "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/MoveableTetromino.cpp",
+  "file": "/Users/anselchang/LocalFiles/psycho-ai/src/models/MoveableTetromino.cpp"
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",

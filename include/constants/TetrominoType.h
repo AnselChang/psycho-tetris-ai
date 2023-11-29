@@ -4,6 +4,7 @@
 #include <map>
 
 enum TetrominoType {
+    UNDEFINED_TYPE,
     I_TYPE,
     J_TYPE,
     L_TYPE,

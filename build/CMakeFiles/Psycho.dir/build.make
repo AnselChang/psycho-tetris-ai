@@ -69,24 +69,10 @@ include CMakeFiles/Psycho.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Psycho.dir/flags.make
 
-CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: CMakeFiles/Psycho.dir/flags.make
-CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: ../src/models/Grid.cpp
-CMakeFiles/Psycho.dir/src/models/Grid.cpp.o: CMakeFiles/Psycho.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Psycho.dir/src/models/Grid.cpp.o"
-	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Psycho.dir/src/models/Grid.cpp.o -MF CMakeFiles/Psycho.dir/src/models/Grid.cpp.o.d -o CMakeFiles/Psycho.dir/src/models/Grid.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/Grid.cpp
-
-CMakeFiles/Psycho.dir/src/models/Grid.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Psycho.dir/src/models/Grid.cpp.i"
-	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anselchang/LocalFiles/psycho-ai/src/models/Grid.cpp > CMakeFiles/Psycho.dir/src/models/Grid.cpp.i
-
-CMakeFiles/Psycho.dir/src/models/Grid.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Psycho.dir/src/models/Grid.cpp.s"
-	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anselchang/LocalFiles/psycho-ai/src/models/Grid.cpp -o CMakeFiles/Psycho.dir/src/models/Grid.cpp.s
-
 CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o: CMakeFiles/Psycho.dir/flags.make
 CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o: ../src/models/TetrisBoard.cpp
 CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o: CMakeFiles/Psycho.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o"
 	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o -MF CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o.d -o CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/TetrisBoard.cpp
 
 CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.i: cmake_force
@@ -100,7 +86,7 @@ CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.s: cmake_force
 CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: CMakeFiles/Psycho.dir/flags.make
 CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: ../src/models/Tetromino.cpp
 CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o: CMakeFiles/Psycho.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o"
 	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o -MF CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o.d -o CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/Tetromino.cpp
 
 CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.i: cmake_force
@@ -110,6 +96,20 @@ CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.i: cmake_force
 CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.s"
 	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anselchang/LocalFiles/psycho-ai/src/models/Tetromino.cpp -o CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.s
+
+CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o: CMakeFiles/Psycho.dir/flags.make
+CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o: ../src/models/MoveableTetromino.cpp
+CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o: CMakeFiles/Psycho.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anselchang/LocalFiles/psycho-ai/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o"
+	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o -MF CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o.d -o CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/models/MoveableTetromino.cpp
+
+CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.i"
+	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anselchang/LocalFiles/psycho-ai/src/models/MoveableTetromino.cpp > CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.i
+
+CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.s"
+	/opt/homebrew/bin/aarch64-apple-darwin20-g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anselchang/LocalFiles/psycho-ai/src/models/MoveableTetromino.cpp -o CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.s
 
 CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o: CMakeFiles/Psycho.dir/flags.make
 CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o: ../src/constants/Tetrominos.cpp
@@ -141,18 +141,18 @@ CMakeFiles/Psycho.dir/src/main.cpp.s: cmake_force
 
 # Object files for target Psycho
 Psycho_OBJECTS = \
-"CMakeFiles/Psycho.dir/src/models/Grid.cpp.o" \
 "CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o" \
 "CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o" \
+"CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o" \
 "CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o" \
 "CMakeFiles/Psycho.dir/src/main.cpp.o"
 
 # External object files for target Psycho
 Psycho_EXTERNAL_OBJECTS =
 
-Psycho: CMakeFiles/Psycho.dir/src/models/Grid.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/models/TetrisBoard.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.o
+Psycho: CMakeFiles/Psycho.dir/src/models/MoveableTetromino.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.o
 Psycho: CMakeFiles/Psycho.dir/src/main.cpp.o
 Psycho: CMakeFiles/Psycho.dir/build.make
