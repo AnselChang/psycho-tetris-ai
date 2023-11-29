@@ -1,3 +1,6 @@
+#ifndef INPUT_SEQUENCE_H
+#define INPUT_SEQUENCE_H
+
 #include <vector>
 #include <string>
 
@@ -14,3 +17,5 @@ public:
     bool get(int index) const;
 
 };
+
+#endif // INPUT_SEQUENCE_H

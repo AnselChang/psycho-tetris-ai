@@ -1,3 +1,6 @@
+#ifndef TETRIS_AI_ACTIONFRAME_H
+#define TETRIS_AI_ACTIONFRAME_H
+
 #include <vector>
 #include "constants/GameSpeed.h"
 #include "simulation/InputSequence.h"
@@ -26,3 +29,5 @@ public:
     void display() const;
 
 };
+
+#endif //TETRIS_AI_ACTIONFRAME_H

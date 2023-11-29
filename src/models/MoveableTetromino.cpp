@@ -65,16 +65,24 @@ void MoveableTetromino::blitToTetrisBoard(TetrisBoard& tetrisBoard) const {
     // blit row by row using bitwise operations
     for (int y = 0; y < 4; y++) {
 
+        const int tetrisBoardRowIndex = this->y + y;
+        if (tetrisBoardRowIndex < 0) continue;
+
         const std::bitset<10> shiftedGridRow = this->getShiftedRow(y);
 
         // get the row of the tetrisBoard that we are blitting to
-        const int tetrisBoardRowIndex = this->y + y;
         const auto tetrisBoardRow = tetrisBoard.getGrid().getRow(tetrisBoardRowIndex);
 
         // blit the padded gridRow to the tetrisBoardRow
         tetrisBoard.getGrid().setRow(tetrisBoardRowIndex, shiftedGridRow | tetrisBoardRow);
     }
 
+}
+
+TetrisBoard MoveableTetromino::blitToNewTetrisBoard(const TetrisBoard& tetrisBoard) const {
+    TetrisBoard newTetrisBoard = tetrisBoard;
+    this->blitToTetrisBoard(newTetrisBoard);
+    return newTetrisBoard;
 }
 
 TetrisBoard MoveableTetromino::getAsTetrisBoard() const {
@@ -87,22 +95,15 @@ TetrisBoard MoveableTetromino::getAsTetrisBoard() const {
 bool MoveableTetromino::isInBounds() const {
     const Grid<4,4> grid = this->getGridAtCurrentRotation();
     const int minXIndex = TETROMINOS[this->tetrominoType].getMinXIndex(this->rotation);
-    const int minYIndex = TETROMINOS[this->tetrominoType].getMinYIndex(this->rotation);
     const int maxXIndex = TETROMINOS[this->tetrominoType].getMaxXIndex(this->rotation);
     const int maxYIndex = TETROMINOS[this->tetrominoType].getMaxYIndex(this->rotation);
 
     const int relMinX = this->x + minXIndex;
     const int relMaxX = this->x + maxXIndex;
-    const int relMinY = this->y + minYIndex;
     const int relMaxY = this->y + maxYIndex;
 
-    std::cout << "relMinX: " << relMinX << std::endl;
-    std::cout << "relMaxX: " << relMaxX << std::endl;
-    std::cout << "relMinY: " << relMinY << std::endl;
-    std::cout << "relMaxY: " << relMaxY << std::endl;
-
     // check if the tetromino is out of bounds of the 20 row x 10 col tetris board
-    if (relMinX < 0 || relMaxX >= 10 || relMinY < 0 || relMaxY >= 20) {
+    if (relMinX < 0 || relMaxX >= 10 || relMaxY >= 20) {
         return false;
     }
 
@@ -114,11 +115,12 @@ bool MoveableTetromino::intersectsTetrisBoard(const TetrisBoard& tetrisBoard) co
     
     // check if it insersects row by row
     for (int y = 0; y < 4; y++) {
+        const int tetrisBoardRowIndex = this->y + y;
+        if (tetrisBoardRowIndex < 0) continue;
 
         const std::bitset<10> shiftedGridRow = this->getShiftedRow(y);
 
         // get the row of the tetrisBoard that we are comparing with
-        const int tetrisBoardRowIndex = this->y + y;
         const auto tetrisBoardRow = tetrisBoard.getRow(tetrisBoardRowIndex);
 
         // check if the shiftedGridRow intersects with the tetrisBoardRow

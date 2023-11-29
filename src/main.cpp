@@ -4,24 +4,38 @@
 #include "constants/TetrominoType.h"
 #include "models/MoveableTetromino.h"
 #include "simulation/ActionFrame.h"
+#include "simulation/MoveGeneration.h"
+
+
+#include <chrono>
+using namespace std::chrono;
 
 int main() {
 
-    MoveableTetromino mt(TetrominoType::O_TYPE, 0, 3, -2);
-    if (mt.isInBounds()) mt.getAsTetrisBoard().display();
-    std::cout << "------" << std::endl;
 
+    ActionFrames af(InputSequence("X..."), 19);
 
-    // for (int i = -2; i < 3; i++) {
-    //     for (int j = -3; j < 2; j++) {
-    //         MoveableTetromino mt(TetrominoType::T_TYPE, 0, i, j);
-    //         std::cout << (mt.isInBounds() ? "bounds" : "out of bounds") << std::endl;
-    //         if (mt.isInBounds()) mt.getAsTetrisBoard().display();
-    //         std::cout << "------" << std::endl;
-    //     }
-    // }
-    
+    // fill board with all blocks for the bottom 12 rows
+    TetrisBoard board;
+    for (int y = 6; y < 20; y++) {
+        for (int x = 0; x < 10; x++) {
+            board.getGrid().set(x, y, true);
+        }
+    }
 
+    auto start = high_resolution_clock::now();
+    std::vector<MoveableTetromino> moves = generateMoves(board, af, TetrominoType::I_TYPE);
+    auto stop = high_resolution_clock::now();
+
+    std::cout << "_______" << std::endl;
+    for (MoveableTetromino mt : moves) {
+        TetrisBoard copy = board;
+        mt.blitToTetrisBoard(copy);
+        copy.display();
+    }
+
+    auto duration = duration_cast<milliseconds>(stop - start);
+    std::cout << "Time taken by function: " << duration.count() << " milliseconds" << std::endl;
 
     return 0;
 }

@@ -35,6 +35,7 @@ public:
 
     // modifies the tetris board by blitting the tetromino to it
     void blitToTetrisBoard(TetrisBoard& tetrisBoard) const;
+    TetrisBoard blitToNewTetrisBoard(const TetrisBoard& tetrisBoard) const;
 
     // returns a new TetrisBoard with the tetromino blitted to it
     TetrisBoard getAsTetrisBoard() const;
