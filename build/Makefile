@@ -269,6 +269,30 @@ src/models/Tetromino.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/models/Tetromino.cpp.s
 .PHONY : src/models/Tetromino.cpp.s
 
+src/simulation/InputSequence.o: src/simulation/InputSequence.cpp.o
+.PHONY : src/simulation/InputSequence.o
+
+# target to build an object file
+src/simulation/InputSequence.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.o
+.PHONY : src/simulation/InputSequence.cpp.o
+
+src/simulation/InputSequence.i: src/simulation/InputSequence.cpp.i
+.PHONY : src/simulation/InputSequence.i
+
+# target to preprocess a source file
+src/simulation/InputSequence.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.i
+.PHONY : src/simulation/InputSequence.cpp.i
+
+src/simulation/InputSequence.s: src/simulation/InputSequence.cpp.s
+.PHONY : src/simulation/InputSequence.s
+
+# target to generate assembly for a file
+src/simulation/InputSequence.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/simulation/InputSequence.cpp.s
+.PHONY : src/simulation/InputSequence.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -295,6 +319,9 @@ help:
 	@echo "... src/models/Tetromino.o"
 	@echo "... src/models/Tetromino.i"
 	@echo "... src/models/Tetromino.s"
+	@echo "... src/simulation/InputSequence.o"
+	@echo "... src/simulation/InputSequence.i"
+	@echo "... src/simulation/InputSequence.s"
 .PHONY : help
 
 

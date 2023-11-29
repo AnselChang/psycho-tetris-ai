@@ -15,6 +15,7 @@ set(SOURCES
     src/models/TetrisBoard.cpp
     src/models/Tetromino.cpp
     src/models/MoveableTetromino.cpp
+    src/simulation/InputSequence.cpp
     src/constants/Tetrominos.cpp
     src/main.cpp
 )
