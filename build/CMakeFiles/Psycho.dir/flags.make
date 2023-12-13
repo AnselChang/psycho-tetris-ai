@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/anselchang/LocalFiles/psycho-ai/include
 
-CXX_FLAGSarm64 = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+CXX_FLAGSarm64 = -O2 -Wall -Wextra -Wpedantic -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
 
-CXX_FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+CXX_FLAGS = -O2 -Wall -Wextra -Wpedantic -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
 

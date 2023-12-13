@@ -22,11 +22,7 @@ public:
     Grid() {}
 
     Grid(std::initializer_list<std::bitset<width>> rows) {
-        int i = 0;
-        for (auto& row : rows) {
-            this->rows[i] = row;
-            i++;
-        }
+        std::copy(rows.begin(), rows.end(), this->rows.begin());
     }
 
     void set(int x, int y, bool value) {

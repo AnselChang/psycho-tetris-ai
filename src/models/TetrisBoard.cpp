@@ -2,9 +2,6 @@
 #include "models/MoveableTetromino.h"
 #include <iostream>
 
-TetrisBoard::TetrisBoard() {
-
-}
 
 TetrisBoard::TetrisBoard(Grid<width, height> grid): grid(grid) {
 
@@ -26,11 +23,11 @@ void TetrisBoard::display() const {
     this->grid.display();
 }
 
-void TetrisBoard::displayWithPiece(MoveableTetromino* mt, MoveableTetromino* mt2) const {
+void TetrisBoard::displayWithPiece(std::optional<MoveableTetromino> mt, std::optional<MoveableTetromino> mt2) const {
     Grid<10, 20> grid = this->grid;
 
-    Grid<10, 20>* p1 = mt ? &(mt->getAsTetrisBoard().getGrid()) : nullptr;
-    Grid<10, 20>* p2 = mt2 ? &(mt2->getAsTetrisBoard().getGrid()) : nullptr;
+    const auto p1 = mt ? std::optional{mt->getAsTetrisBoard().getGrid()} : std::nullopt;
+    const auto p2 = mt2 ? std::optional{mt2->getAsTetrisBoard().getGrid()} : std::nullopt;
 
     for (int y = 0; y < 20; y++) {
         for (int x = 0; x < 10; x++) {

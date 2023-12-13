@@ -7,6 +7,7 @@
 #include <vector>
 #include <optional>
 #include "models/Grid.h"
+#include "models/MoveableTetromino.h"
 
 class MoveableTetromino;
 
@@ -17,11 +18,10 @@ private:
 
     Grid<width, height> grid;
 
-
 public:
 
     // constructor that takes in a list of rows
-    TetrisBoard();
+    TetrisBoard() = default;
     TetrisBoard(Grid<width, height> grid);
 
 
@@ -29,7 +29,7 @@ public:
     std::bitset<width> getRow(int y) const;
     bool get(int x, int y) const;
     void display() const;
-    void displayWithPiece(MoveableTetromino* mt = nullptr, MoveableTetromino* mt2 = nullptr) const;
+    void displayWithPiece(std::optional<MoveableTetromino> mt = {}, std::optional<MoveableTetromino> mt2 = {}) const;
 
     // run any line clears and return the number of lines cleared
     int clearLines();

@@ -42,7 +42,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk"
+					"fragment" : "-O2 -Wall -Wextra -Wpedantic -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk"
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -85,7 +85,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-O3",
+				"fragment" : "-O2 -Wall -Wextra -Wpedantic",
 				"role" : "flags"
 			},
 			{

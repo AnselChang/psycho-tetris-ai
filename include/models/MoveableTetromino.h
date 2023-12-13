@@ -3,7 +3,8 @@
 
 #include "constants/TetrominoType.h"
 #include "models/Tetromino.h"
-#include "models/TetrisBoard.h"
+
+class TetrisBoard;
 
 class MoveableTetromino {
 
@@ -28,6 +29,11 @@ public:
 
     // setters
     void setPose(int r, int x, int y);
+
+    // move tetromino if legal (no intersection with board and in bounds)
+    // should only be a single action (only one paramter should be nonzero and have magnitude 1)
+    // if move is illegal, do not move the piece and return false
+    bool translateIfLegal(const TetrisBoard& tetrisBoard, int dx, int dy, int dr);
 
     TetrominoType getTetrominoType() const;
     Tetromino getTetromino() const;

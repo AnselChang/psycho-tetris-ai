@@ -11,7 +11,7 @@ ActionFrames::ActionFrames(const InputSequence& sequence, int level) {
     // if both input and drop at the same time, input is processed before drop
     for (int i = 0; i < framesPerDrop * 20; i++) {
         const bool isInput = sequence.get(i);
-        const bool isDrop = i % framesPerDrop == 0;
+        const bool isDrop = (i+1) % framesPerDrop == 0;
 
         if (isInput && isDrop) {
             this->frames.push_back({i, INPUT});
@@ -24,8 +24,8 @@ ActionFrames::ActionFrames(const InputSequence& sequence, int level) {
     }
 }
 
-ActionFrame ActionFrames::get(int index) const {
-    if (index < 0 || index >= this->frames.size()) throw std::invalid_argument("ActionFrames::get(int index): index out of bounds");
+ActionFrame ActionFrames::get(size_t index) const {
+    if (index >= this->frames.size()) throw std::invalid_argument("ActionFrames::get(int index): index out of bounds");
     return this->frames[index];
 }
 
@@ -35,6 +35,6 @@ int ActionFrames::size() const {
 
 void ActionFrames::display() const {
     for (ActionFrame frame : this->frames) {
-        std::cout << (frame.action == Action::INPUT ? "Input" : "Drop") << std::endl;
+        std::cout << frame.frameIndex << ": " << (frame.action == Action::INPUT ? "Input" : "Drop") << std::endl;
     }
 }

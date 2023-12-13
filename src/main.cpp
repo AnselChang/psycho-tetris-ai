@@ -11,7 +11,18 @@
 #include <chrono>
 using namespace std::chrono;
 
-void testMoveGeneration(TetrisBoard& board) {
+void testMoveGeneration() {
+
+    TetrisBoard board;
+    // randomize bottom rows
+    for (int y = 15; y < 20; y++) {
+        for (int x = 0; x < 10; x++) {
+            board.getGrid().set(x, y, rand() % 7);
+        }
+    }
+
+    std::cout << "NEW GENERATION" << std::endl;
+    board.display();
 
     ActionFrames af(InputSequence("X."), 18);
 
@@ -21,7 +32,7 @@ void testMoveGeneration(TetrisBoard& board) {
 
     std::cout << "_______" << std::endl;
     for (MoveableTetromino mt : moves) {
-        board.displayWithPiece(&mt);
+        board.displayWithPiece(mt);
         // board.displayWithPiece();
     }
     auto duration = duration_cast<microseconds>(stop - start);
@@ -32,7 +43,7 @@ void testMoveGeneration(TetrisBoard& board) {
 void testSearch() {
 
     TetrisBoard board;
-    TwoPieceSearch search(TetrominoType::J_TYPE, TetrominoType::T_TYPE, board, InputSequence("X..."), 18);
+    TwoPieceSearch search(TetrominoType::J_TYPE, TetrominoType::T_TYPE, board, InputSequence("X...."), 18);
 
     auto start = high_resolution_clock::now();
     search.search();
@@ -45,17 +56,24 @@ void testSearch() {
 
 }
 
+void testActionFrame() {
+    ActionFrames af(InputSequence("X."), 18);
+    af.display();
+}
+
 int main() {
 
-    TetrisBoard board;
-    // randomize bottom rows
-    for (int y = 15; y < 20; y++) {
-        for (int x = 0; x < 10; x++) {
-            board.getGrid().set(x, y, rand() % 7);
-        }
-    }
+    // testSearch();
+    testMoveGeneration();
+    //testActionFrame();
 
-    testMoveGeneration(board);
+
+    // MoveableTetromino mt(TetrominoType::T_TYPE, 0, 5, 6);
+    // TetrisBoard board;
+
+    // board.displayWithPiece(mt);
+
+    
 
     return 0;
 }

@@ -26,6 +26,6 @@ void TwoPieceSearch::search() {
 
 void TwoPieceSearch::display() {
     for (TwoPiecePlacement placement : placements) {
-        board.displayWithPiece(&placement.firstPiece, &placement.secondPiece);
+        board.displayWithPiece(placement.firstPiece, placement.secondPiece);
     }
 }

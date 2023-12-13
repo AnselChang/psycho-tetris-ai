@@ -1,5 +1,6 @@
 #include "models/MoveableTetromino.h"
 #include "constants/Tetrominos.h"
+#include "models/TetrisBoard.h"
 
 MoveableTetromino::MoveableTetromino(TetrominoType tetrominoType):
     tetrominoType(tetrominoType),
@@ -30,6 +31,28 @@ void MoveableTetromino::setPose(int r, int x, int y) {
     this->rotation = r % this->numRotations;
     this->x = x;
     this->y = y;
+}
+
+bool MoveableTetromino::translateIfLegal(const TetrisBoard& tetrisBoard, int dx, int dy, int dr) {
+    
+    // cache old pose to revert to if illegal
+    const int oldX = this->x;
+    const int oldY = this->y;
+    const int oldRotation = this->rotation;
+
+    // set new pose
+    this->setPose(this->rotation + dr, this->x + dx, this->y + dy);
+
+    // check if new pose is legal
+    if (!this->isInBounds() || this->intersectsTetrisBoard(tetrisBoard)) {
+        // revert to old pose
+        this->setPose(oldRotation, oldX, oldY);
+        return false;
+    }
+
+    // retain new pose after successful translation
+    return true;
+
 }
 
 TetrominoType MoveableTetromino::getTetrominoType() const {
@@ -93,7 +116,6 @@ TetrisBoard MoveableTetromino::getAsTetrisBoard() const {
 
 // based on the min and max x and y indices of the tetromino, check if it is in bounds
 bool MoveableTetromino::isInBounds() const {
-    const Grid<4,4> grid = this->getGridAtCurrentRotation();
     const int minXIndex = TETROMINOS[this->tetrominoType].getMinXIndex(this->rotation);
     const int maxXIndex = TETROMINOS[this->tetrominoType].getMaxXIndex(this->rotation);
     const int maxYIndex = TETROMINOS[this->tetrominoType].getMaxYIndex(this->rotation);

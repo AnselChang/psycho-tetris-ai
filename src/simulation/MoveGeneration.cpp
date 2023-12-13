@@ -1,122 +1,121 @@
 #include "simulation/MoveGeneration.h"
 #include "constants/Tetrominos.h"
+#include "models/TetrisBoard.h"
 #include <queue>
 
-struct Position {
-    int actionFrameIndex; // not actual frame index
-    int frameIndex; // actual frame index
-    int x;
-    int y;
-};
 
-class Compare
-{
-public:
-    bool operator()(const Position& lhs, const Position& rhs) {
-        return lhs.frameIndex > rhs.frameIndex;
-    }
-};
+// generate the move for a specific rotation and specified number of translation inputs/left right
+// also check for tuck/spins right before piece lock
+// if piece locks before reaching the number of inputs, then return false 
+bool generateMovesForRotationAndInputs(std::vector<MoveableTetromino>& moves, const TetrisBoard& board, const ActionFrames& frames, TetrominoType type, int rotation, int inputs) {
 
+    // std::cout << "Generating moves for rotation " << rotation << " and inputs " << inputs << std::endl;
 
-void generateMovesForRotation(std::vector<MoveableTetromino>& moves, const TetrisBoard& board, const ActionFrames& frames, TetrominoType type, int rotation) {
+    // new piece at specified rotation and spawn position
+    MoveableTetromino mt(type, rotation, TETROMINOS[type].getSpawnX(), TETROMINOS[type].getSpawnY());
 
-    // pad to avoid negative indices
-    const int VISITED_OFFSET = 2;
+    size_t numInputsSoFar = 0;
+    size_t totalInputs = (inputs < 0 ? -inputs : inputs);
+    int inputDirection = (inputs < 0 ? -1 : 1);
+    size_t actionFrameIndex = 0;
 
-    bool visited[20+VISITED_OFFSET][10+VISITED_OFFSET]; // [y][x]
-    for (int y = 0; y < 20+VISITED_OFFSET; y++) {
-        for (int x = 0; x < 10+VISITED_OFFSET; x++) {
-            visited[y][x] = false;
-        }
-    }
+    while (true) {
 
-    std::priority_queue<Position, std::vector<Position>, Compare> queue; // lowest FRAME INDEX (not actionindex) first
-    
-    int startX = TETROMINOS[type].getSpawnX();
-    int startY = TETROMINOS[type].getSpawnY();
-    visited[startY+VISITED_OFFSET][startX+VISITED_OFFSET] = true;
-    queue.push({0, 0, startX, startY});
-
-    while (!queue.empty()) {
-        Position position = queue.top();
-        queue.pop();
-
-        ActionFrame frame = frames.get(position.actionFrameIndex);
-
-        MoveableTetromino originalMt(type, rotation, position.x, position.y);
-        // std::cout << "original" << std::endl;
-        // originalMt.blitToNewTetrisBoard(board).display();
+        // board.displayWithPiece(mt);
+        
+        ActionFrame frame = frames.get(actionFrameIndex);
 
         if (frame.action == Action::INPUT) {
-
-            // std::cout << "input" << std::endl;
             
-            // loop through possible translation input
-            for (int newX = position.x - 1; newX <= position.x + 1; newX++) {
-                // std::cout << (position.x-newX) << std::endl;
-                MoveableTetromino mt(type, rotation, newX, position.y);
+            // if haven't reached target number of inputs, then perform input
+            if (numInputsSoFar < totalInputs) {
 
-                // std::cout << "before bounds" << std::endl;
-                // ignore if out of bounds
-                if (!mt.isInBounds()) continue;
+                // std::cout << "shifting " << inputDirection << std::endl;
 
+                const bool isLegalTranslation = mt.translateIfLegal(board, inputDirection, 0, 0);
+                // if cannot shift, that means reached end of the board or blocks are in the way. terminate search in this entire input direction
+                if (!isLegalTranslation) {
+                    std::cout << "cannot shift, terminate search in this entire input direction" << std::endl;
+                    return false;
+                }
 
-                // std::cout << "before collide" << std::endl;
-                // ignore if colliding with board (after the horizontal shift)
-                if (mt.intersectsTetrisBoard(board)) continue;
-
-                // std::cout << "before visited" << std::endl;
-                // ignore if visited
-                if (newX != position.x && visited[mt.getY()+VISITED_OFFSET][mt.getX()+VISITED_OFFSET]) continue;
-
-                // mt.blitToNewTetrisBoard(board).display();
-
-                // std::cout << "before register" << std::endl;
-                // Register the input by adding to visited and pushing to queue
-                visited[mt.getY()+VISITED_OFFSET][mt.getX()+VISITED_OFFSET] = true;
-                int frameIndex = frames.get(position.actionFrameIndex+1).frameIndex;
-                queue.push({position.actionFrameIndex + 1, frameIndex, mt.getX(), mt.getY()});
-                // std::cout << "after register" << std::endl;
+                // successful shift
+                // std::cout << "successful shift" << std::endl;
+                numInputsSoFar++;
+            } else {
+                // std::cout << "reached target number of inputs, skipping frame" << std::endl;
             }
-        } else { // frame.action == Action::DROP
-
-            // std::cout << "drop" << std::endl;
-
-            MoveableTetromino mt(type, rotation, position.x, position.y);
+        } else if (frame.action == Action::DROP) {
 
             // check if it's already a valid placement. if so, cannot drop but lock piece instead
             if (mt.isLegalPlacement(board)) {
-
-                // std::cout << "LOCK" << std::endl;
-                // mt.blitToNewTetrisBoard(board).display();
-
+                // std::cout << "PUSH_BACK VALID PLACEMENT" << std::endl;
                 moves.push_back(mt);
-                continue;
-            } else {                
-                // asert drop is legal. REMOVE IN PRODUCTION
-                MoveableTetromino dropMt(type, rotation, position.x, position.y + 1);
-                // std::cout << "after drop" << std::endl;
-                if (!dropMt.isInBounds() || dropMt.intersectsTetrisBoard(board)) throw std::runtime_error("generateMovesForRotation: drop is not legal, something went wrong");
-                // dropMt.blitToNewTetrisBoard(board).display();
+                return true;
+            } else {
 
-                // otherwise, drop and add to queue
-                visited[mt.getY()+VISITED_OFFSET + 1][mt.getX()+VISITED_OFFSET] = true;
-                int frameIndex = frames.get(position.actionFrameIndex+1).frameIndex;
-                queue.push({position.actionFrameIndex + 1, frameIndex, mt.getX(), mt.getY() + 1});
+                // std::cout << "dropping" << std::endl;
+
+                // otherwise, drop
+                const bool isLegal = mt.translateIfLegal(board, 0, 1, 0);
+
+                // if current placement is not legal yet cannot drop, something went wrong
+                if (!isLegal) throw std::runtime_error("generateMovesForRotationAndInputs: drop is not legal, something went wrong");
             }
-
         }
-        
+        actionFrameIndex++;
     }
 
-
 }
+
 
 std::vector<MoveableTetromino> generateMoves(const TetrisBoard& board, const ActionFrames& frames, TetrominoType type) {
     std::vector<MoveableTetromino> moves;
 
+    const int spawnX = TETROMINOS[type].getSpawnX();
+    const int spawnY = TETROMINOS[type].getSpawnY();
+
     for (int rotation = 0; rotation < TETROMINOS[type].getNumRotations(); rotation++) {
-        generateMovesForRotation(moves, board, frames, type, rotation);
+
+        MoveableTetromino spawn(type, rotation, spawnX, spawnY);
+        spawn.getAsTetrisBoard().display();
+
+        // no translation input case
+        generateMovesForRotationAndInputs(moves, board, frames, type, rotation, 0);
+
+        // loop once for 
+        for (int inputDirection = -1; inputDirection <= 1; inputDirection += 2) {
+
+            // std::cout << "inputDirection: " << inputDirection << std::endl;
+
+            // check all left input cases where piece hasn't hit the left edge of the board
+            size_t numTranslationInputs = 0;
+            while (true) {
+
+                numTranslationInputs++;
+
+                const int directionalInputs = numTranslationInputs * inputDirection;
+
+                // std::cout << "directionalInputs: " << directionalInputs << std::endl;
+
+                // check if piece has hit the edge of the board. if so, break
+                MoveableTetromino mt(type, rotation, TETROMINOS[type].getSpawnX() + directionalInputs, TETROMINOS[type].getSpawnY());
+                mt.getAsTetrisBoard().display();
+                if (!mt.isInBounds()) {
+                    std::cout << "piece hit the edge of the board, break" << std::endl;
+                    break;
+                }
+
+                // simulate the left inputs
+                bool continueSearchInThisDirection = generateMovesForRotationAndInputs(moves, board, frames, type, rotation, directionalInputs);
+                
+                // if didn't even reach the number of inputs, and piece locked, then no point searching further
+                if (!continueSearchInThisDirection) {
+                    // std::cout << "piece locked before reaching the number of inputs, break" << std::endl;
+                    break;
+                }
+            }
+        }
     }
 
     

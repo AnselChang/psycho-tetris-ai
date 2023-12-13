@@ -2,6 +2,7 @@
 #define TWOPIECEPLACEMENT_H
 
 #include "models/MoveableTetromino.h"
+#include "models/TetrisBoard.h"
 
 // stores a single permutation of placements for the current and next pieces
 struct TwoPiecePlacement {

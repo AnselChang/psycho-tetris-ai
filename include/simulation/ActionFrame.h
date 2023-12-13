@@ -24,7 +24,7 @@ private:
 public:
     ActionFrames(const InputSequence& sequence, int level);
 
-    ActionFrame get(int index) const; // get ActionFrame index (not frame index)
+    ActionFrame get(size_t index) const; // get ActionFrame index (not frame index)
     int size() const;
     void display() const;
 
