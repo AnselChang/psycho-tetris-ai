@@ -197,6 +197,30 @@ src/constants/Tetrominos.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/constants/Tetrominos.cpp.s
 .PHONY : src/constants/Tetrominos.cpp.s
 
+src/http/ExtractQueryParams.o: src/http/ExtractQueryParams.cpp.o
+.PHONY : src/http/ExtractQueryParams.o
+
+# target to build an object file
+src/http/ExtractQueryParams.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/http/ExtractQueryParams.cpp.o
+.PHONY : src/http/ExtractQueryParams.cpp.o
+
+src/http/ExtractQueryParams.i: src/http/ExtractQueryParams.cpp.i
+.PHONY : src/http/ExtractQueryParams.i
+
+# target to preprocess a source file
+src/http/ExtractQueryParams.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/http/ExtractQueryParams.cpp.i
+.PHONY : src/http/ExtractQueryParams.cpp.i
+
+src/http/ExtractQueryParams.s: src/http/ExtractQueryParams.cpp.s
+.PHONY : src/http/ExtractQueryParams.s
+
+# target to generate assembly for a file
+src/http/ExtractQueryParams.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Psycho.dir/build.make CMakeFiles/Psycho.dir/src/http/ExtractQueryParams.cpp.s
+.PHONY : src/http/ExtractQueryParams.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -406,6 +430,9 @@ help:
 	@echo "... src/constants/Tetrominos.o"
 	@echo "... src/constants/Tetrominos.i"
 	@echo "... src/constants/Tetrominos.s"
+	@echo "... src/http/ExtractQueryParams.o"
+	@echo "... src/http/ExtractQueryParams.i"
+	@echo "... src/http/ExtractQueryParams.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

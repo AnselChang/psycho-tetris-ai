@@ -31,6 +31,11 @@
 },
 {
   "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -Wall -Wextra -Wpedantic -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/http/ExtractQueryParams.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/http/ExtractQueryParams.cpp",
+  "file": "/Users/anselchang/LocalFiles/psycho-ai/src/http/ExtractQueryParams.cpp"
+},
+{
+  "directory": "/Users/anselchang/LocalFiles/psycho-ai/build",
   "command": "/opt/homebrew/bin/aarch64-apple-darwin20-g++-11  -I/Users/anselchang/LocalFiles/psycho-ai/include -O3 -Wall -Wextra -Wpedantic -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17 -o CMakeFiles/Psycho.dir/src/search/TwoPieceSearch.cpp.o -c /Users/anselchang/LocalFiles/psycho-ai/src/search/TwoPieceSearch.cpp",
   "file": "/Users/anselchang/LocalFiles/psycho-ai/src/search/TwoPieceSearch.cpp"
 },

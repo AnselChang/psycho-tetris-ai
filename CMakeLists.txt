@@ -22,6 +22,7 @@ set(SOURCES
     src/simulation/InputSequence.cpp
     src/simulation/ActionFrame.cpp
     src/simulation/MoveGeneration.cpp
+    src/http/ExtractQueryParams.cpp
     src/search/TwoPieceSearch.cpp
     src/constants/Tetrominos.cpp
     src/constants/GameSpeed.cpp

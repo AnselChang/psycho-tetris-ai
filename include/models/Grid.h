@@ -25,6 +25,16 @@ public:
         std::copy(rows.begin(), rows.end(), this->rows.begin());
     }
 
+    Grid(std::string zerosAndOnes) {
+        int i = 0;
+        for (char c : zerosAndOnes) {
+            if (c == '1') {
+                set(i % width, i / width, true);
+            }
+            i++;
+        }
+    }
+
     void set(int x, int y, bool value) {
         rows[y].set(x, value);
     }

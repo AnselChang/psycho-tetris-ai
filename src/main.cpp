@@ -1,5 +1,7 @@
 #include <iostream>
+#include "http/ExtractQueryParams.h"
 #include "models/TetrisBoard.h"
+#include "models/BoardState.h"
 #include "constants/Tetrominos.h"
 #include "constants/TetrominoType.h"
 #include "models/MoveableTetromino.h"
@@ -92,7 +94,7 @@ int getPort() {
     return port;
 }
 
-void testHTTPServer() {
+void runHTTPServer() {
 
     // HTTP
     httplib::Server svr;
@@ -100,33 +102,41 @@ void testHTTPServer() {
     // // HTTPS
     // httplib::SSLServer svr;
 
-    svr.Get("/hi", [](const httplib::Request &, httplib::Response &res) {
-        std::cout << "GET /hi" << std::endl;
-        res.set_content("Hello World!", "text/plain");
+    svr.Get("/ping", [](const httplib::Request &, httplib::Response &res) {
+        std::cout << "GET /ping" << std::endl;
+        res.set_content("ping", "text/plain");
     });
 
-    svr.Get("/sum", [&](const httplib::Request& req, httplib::Response& res) {
+    /*
+    API:
+    board: 01111...01 (200 0s and 1s)
+    currentPiece: I/J/L/O/S/T/Z
+    nextPiece: I/J/L/O/S/T/Z
+    level: number
+    lines: number
+    inputFrameTimeline: X..X.. (input speed)
+    */
 
-        std::cout << "GET /sum" << std::endl;
+    svr.Get("/get-best-move", [&](const httplib::Request& req, httplib::Response& res) {
 
-        // Initialize a and b with default values.
-        std::string a = "0";
-        std::string b = "0";
+        std::cout << "GET /get-best-move" << std::endl;
 
-        // Check if query parameters exist and assign them.
-        if (req.has_param("a")) {
-            a = req.get_param_value("a");
-            std::cout << "a: " << a << std::endl;
+        BoardState state;
+
+        try {
+            state = extractQueryParams(req);
+        } catch (const std::exception& e) {
+            std::cout << "Error extracting query params: " << e.what() << std::endl;
+            res.set_content("Error extracting query params: " + std::string(e.what()), "text/plain");
+            return;
         }
-        if (req.has_param("b")) {
-            b = req.get_param_value("b");
-            std::cout << "b: " << b << std::endl;
-        }
+        
+        state.display();
 
         // Create a JSON object containing a and b.
         json response_json = {
-            {"a", a},
-            {"b", b}
+            {"a", 1},
+            {"b", 2}
         };
 
         // Set the response content type to application/json and send the JSON as a string.
@@ -141,12 +151,11 @@ void testHTTPServer() {
 
 int main() {
 
-    testHTTPServer();
+    runHTTPServer();
 
     //testSearch();
     //testMoveGeneration();
     //testActionFrame();
-
 
     // MoveableTetromino mt(TetrominoType::T_TYPE, 0, 5, 6);
     // TetrisBoard board;
