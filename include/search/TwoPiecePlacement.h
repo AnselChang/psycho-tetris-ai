@@ -5,15 +5,18 @@
 #include "models/TetrisBoard.h"
 
 // stores a single permutation of placements for the current and next pieces
-struct TwoPiecePlacement {
-    MoveableTetromino firstPiece;
-    MoveableTetromino secondPiece;
+class TwoPiecePlacement {
 
-    void display(TetrisBoard& board) const {
-        TetrisBoard boardWithPlacement = firstPiece.blitToNewTetrisBoard(board);
-        secondPiece.blitToTetrisBoard(boardWithPlacement);
-        boardWithPlacement.display();
-    }
+public:
+    const MoveableTetromino firstPiece;
+    const MoveableTetromino secondPiece;
+    const TetrisBoard resultingBoard;
+
+    TwoPiecePlacement(TetrisBoard resultingBoard, MoveableTetromino firstPiece, MoveableTetromino secondPiece):
+        firstPiece(firstPiece),
+        secondPiece(secondPiece),
+        resultingBoard(resultingBoard)
+    {}
 
 };
 

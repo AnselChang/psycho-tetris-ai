@@ -12,7 +12,7 @@ spawnX(spawnX), spawnY(spawnY) {
     this->type = type;
     this->rotations = rotations;
 
-    std::cout << "Tetromino: " << type << std::endl;
+    // std::cout << "Tetromino: " << type << std::endl;
 
     // calculate the max x and y indices for each rotation
     for (size_t i = 0; i < rotations.size(); i++) {

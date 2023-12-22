@@ -26,8 +26,11 @@ public:
 
     TwoPieceSearch(TetrominoType firstPiece, TetrominoType secondPiece, TetrisBoard board, InputSequence sequence, int level);
 
-    void search();
+    // return a subset of placements that do not burn or create additional holes
+    TwoPieceSearch filterByNoBurnsNoHoles();
 
+    void search();
+    int getNumPlacements() const;
     void display();
 
 };

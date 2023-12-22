@@ -78,7 +78,7 @@ std::vector<MoveableTetromino> generateMoves(const TetrisBoard& board, const Act
     for (int rotation = 0; rotation < TETROMINOS[type].getNumRotations(); rotation++) {
 
         MoveableTetromino spawn(type, rotation, spawnX, spawnY);
-        spawn.getAsTetrisBoard().display();
+        // spawn.getAsTetrisBoard().display();
 
         // no translation input case
         generateMovesForRotationAndInputs(moves, board, frames, type, rotation, 0);
@@ -100,9 +100,8 @@ std::vector<MoveableTetromino> generateMoves(const TetrisBoard& board, const Act
 
                 // check if piece has hit the edge of the board. if so, break
                 MoveableTetromino mt(type, rotation, TETROMINOS[type].getSpawnX() + directionalInputs, TETROMINOS[type].getSpawnY());
-                mt.getAsTetrisBoard().display();
                 if (!mt.isInBounds()) {
-                    std::cout << "piece hit the edge of the board, break" << std::endl;
+                    // std::cout << "piece hit the edge of the board, break" << std::endl;
                     break;
                 }
 

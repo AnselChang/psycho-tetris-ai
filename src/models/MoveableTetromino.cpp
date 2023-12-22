@@ -115,14 +115,22 @@ TetrisBoard MoveableTetromino::getAsTetrisBoard() const {
 }
 
 // based on the min and max x and y indices of the tetromino, check if it is in bounds
-bool MoveableTetromino::isInBounds() const {
+bool MoveableTetromino::isInBounds(bool verbose) const {
     const int minXIndex = TETROMINOS[this->tetrominoType].getMinXIndex(this->rotation);
     const int maxXIndex = TETROMINOS[this->tetrominoType].getMaxXIndex(this->rotation);
     const int maxYIndex = TETROMINOS[this->tetrominoType].getMaxYIndex(this->rotation);
-
+    
     const int relMinX = this->x + minXIndex;
     const int relMaxX = this->x + maxXIndex;
     const int relMaxY = this->y + maxYIndex;
+
+    if (verbose) {
+        std::cout << "rotation: " << this->rotation << std::endl;
+        std::cout << "minXIndex: " << minXIndex << std::endl;
+        std::cout << "maxXIndex: " << maxXIndex << std::endl;
+        std::cout << "relMinX: " << relMinX << std::endl;
+        std::cout << "relMaxX: " << relMaxX << std::endl;
+    }
 
     // check if the tetromino is out of bounds of the 20 row x 10 col tetris board
     if (relMinX < 0 || relMaxX >= 10 || relMaxY >= 20) {
@@ -168,4 +176,9 @@ bool MoveableTetromino::isLegalPlacement(const TetrisBoard& tetrisBoard) const {
     // it is legal only if shiftedTetromino either intersects the tetris board or is out of bounds
     return !shiftedTetromino.isInBounds() || shiftedTetromino.intersectsTetrisBoard(tetrisBoard);
 
+}
+
+void MoveableTetromino::print() const {
+    std::cout << this->tetrominoType << "R: " << this->rotation << " X: " << this->x << " Y: " << this->y << std::endl;
+    this->getAsTetrisBoard().display();
 }

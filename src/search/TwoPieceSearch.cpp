@@ -16,16 +16,23 @@ void TwoPieceSearch::search() {
     for (MoveableTetromino firstPieceMove : firstPieceMoves) {
 
         TetrisBoard boardWithFirstPiece = firstPieceMove.blitToNewTetrisBoard(board);
+        boardWithFirstPiece.clearLines();
         std::vector<MoveableTetromino> secondPieceMoves = generateMoves(boardWithFirstPiece, ActionFrames(InputSequence("X."), 18), secondPiece);
 
         for (MoveableTetromino secondPieceMove : secondPieceMoves) {
-            placements.push_back(TwoPiecePlacement{firstPieceMove, secondPieceMove});
+            TetrisBoard resultingBoard = secondPieceMove.blitToNewTetrisBoard(boardWithFirstPiece);
+            resultingBoard.clearLines();
+            placements.push_back(TwoPiecePlacement{resultingBoard, firstPieceMove, secondPieceMove});
         }
     }
 }
 
 void TwoPieceSearch::display() {
     for (TwoPiecePlacement placement : placements) {
-        board.displayWithPiece(placement.firstPiece, placement.secondPiece);
+        placement.resultingBoard.display();
     }
+}
+
+int TwoPieceSearch::getNumPlacements() const {
+    return placements.size();
 }

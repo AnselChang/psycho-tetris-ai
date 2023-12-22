@@ -15,11 +15,11 @@ private:
     TetrominoType type;
 
     // tetris board for each rotation. pieces have up to four possible rotations
-    std::vector<Grid<4, 4>> rotations{4};
-    std::vector<int> minXIndex{4}; // the minimum x index for each rotation
-    std::vector<int> minYIndex{4}; // the minimum y index for each rotation
-    std::vector<int> maxXIndex{4}; // the maximum x index for each rotation
-    std::vector<int> maxYIndex{4}; // the maximum y index for each rotation
+    std::vector<Grid<4, 4>> rotations;
+    std::vector<int> minXIndex; // the minimum x index for each rotation
+    std::vector<int> minYIndex; // the minimum y index for each rotation
+    std::vector<int> maxXIndex; // the maximum x index for each rotation
+    std::vector<int> maxYIndex; // the maximum y index for each rotation
 
     const int spawnX;
     const int spawnY;

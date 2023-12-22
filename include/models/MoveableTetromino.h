@@ -50,10 +50,12 @@ public:
     bool intersectsTetrisBoard(const TetrisBoard& tetrisBoard) const;
 
     // whether the tetromino in its current pose is in bounds a tetris board
-    bool isInBounds() const;
+    bool isInBounds(bool verbose = false) const;
 
     // whether the tetromino can lock to the given tetris board legally in its current pose
     bool isLegalPlacement(const TetrisBoard& tetrisBoard) const;
+
+    void print() const;
 };
 
 #endif // MOVEABLE_TETROMINO_H
